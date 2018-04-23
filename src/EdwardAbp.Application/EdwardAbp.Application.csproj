@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <VersionPrefix>1.0.0.0</VersionPrefix>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+    <AssemblyName>EdwardAbp.Application</AssemblyName>
+    <PackageId>EdwardAbp.Application</PackageId>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <RootNamespace>EdwardAbp</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DefineConstants>FEATURE_SIGNALR_ASPNETCORE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EdwardAbp.Core\EdwardAbp.Core.csproj" />
+    <ProjectReference Include="..\EdwardAbp.EntityFrameworkCore\EdwardAbp.EntityFrameworkCore.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Abp">
+      <HintPath>..\..\..\..\..\..\Desktop\Edward\Source Code\aspnetboilerplate\src\Abp\bin\Debug\netstandard2.0\Abp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
