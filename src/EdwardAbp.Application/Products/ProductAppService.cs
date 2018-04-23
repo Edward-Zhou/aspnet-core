@@ -17,13 +17,13 @@ namespace EdwardAbp.Products
         }
         public List<Product> GetAll()
         {
-            using (((CustomActiveUnitOfWork)CurrentUnitOfWork).SetOrganizationUnitId(3))
-            {
-                var result1 = _productRepositry.GetAll().ToList();
-            }
             using (CurrentUnitOfWork.SetTenantId(1))
             {
                 var result1 = _productRepositry.GetAll().ToList();
+                using (((CustomActiveUnitOfWork)CurrentUnitOfWork).SetOrganizationUnitId(3))
+                {
+                    var result11 = _productRepositry.GetAll().ToList();
+                }
             }
             using (CurrentUnitOfWork.SetTenantId(2))
             {

@@ -52,14 +52,25 @@ namespace EdwardAbp
             Configuration.DefaultNameOrConnectionString = _appConfiguration.GetConnectionString(
                 EdwardAbpConsts.ConnectionStringName
             );
+            //Configuration.ReplaceService(typeof(IActiveUnitOfWork), () =>
+            //{
+            //    IocManager.Register<IActiveUnitOfWork, CustomActiveUnitOfWork>(DependencyLifeStyle.Transient);
+            //});
+            Configuration.ReplaceService(typeof(IUnitOfWork), () =>
+            {
+                IocManager.Register<IUnitOfWork, CustomActiveUnitOfWork>(DependencyLifeStyle.Transient);
+            });
+
+            IocManager.IocContainer.Register(
+            Component.For(typeof(IDbContextProvider<>))
+                .ImplementedBy(typeof(CustomUnitOfWorkDbContextProvider<>))
+                .LifestyleTransient()
+            );
+
             Configuration.UnitOfWork.RegisterFilter("MayHaveOrganizationUnit", true);
             Configuration.ReplaceService(typeof(IAbpSession), () =>
             {
                 IocManager.Register<IAbpSession, CustomAbpSession>(DependencyLifeStyle.Transient);
-            });
-            Configuration.ReplaceService(typeof(IActiveUnitOfWork), () =>
-            {
-                IocManager.Register<IActiveUnitOfWork, CustomActiveUnitOfWork>(DependencyLifeStyle.Transient);
             });
 
 
@@ -89,11 +100,6 @@ namespace EdwardAbp
         public override void Initialize()
         {
             IocManager.RegisterAssemblyByConvention(typeof(EdwardAbpWebCoreModule).GetAssembly());
-            IocManager.IocContainer.Register(
-                        Component.For(typeof(IDbContextProvider<>))
-                            .ImplementedBy(typeof(CustomUnitOfWorkDbContextProvider<>))
-                            .LifestyleTransient()
-                        );
 
 
         }
