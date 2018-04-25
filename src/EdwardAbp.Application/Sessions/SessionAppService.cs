@@ -24,6 +24,7 @@ namespace EdwardAbp.Sessions
                     }
                 }
             };
+            AbpSession.Use(1, 2);
 
             if (AbpSession.TenantId.HasValue)
             {

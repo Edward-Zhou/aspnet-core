@@ -17,6 +17,7 @@ using EdwardAbp.Authorization;
 using EdwardAbp.Authorization.Users;
 using EdwardAbp.Models.TokenAuth;
 using EdwardAbp.MultiTenancy;
+using Abp.Runtime.Session;
 
 namespace EdwardAbp.Controllers
 {
@@ -48,7 +49,7 @@ namespace EdwardAbp.Controllers
             _externalAuthManager = externalAuthManager;
             _userRegistrationManager = userRegistrationManager;
         }
-
+        //public IAbpSession AbpSession { get; }
         [HttpPost]
         public async Task<AuthenticateResultModel> Authenticate([FromBody] AuthenticateModel model)
         {
@@ -57,7 +58,16 @@ namespace EdwardAbp.Controllers
                 model.Password,
                 GetTenancyNameOrNull()
             );
+            using (((ICustomAbpSession)AbpSession).Use(3, 2, 1))
+            {
+                var rr = ((ICustomAbpSession)AbpSession).OrganizationUnitId;
+            }
+            using (AbpSession.Use(3, 2))
+            {
+                var rr = AbpSession.TenantId;
+            }
 
+            var r = ((ICustomAbpSession)AbpSession).OrganizationUnitId;
             var accessToken = CreateAccessToken(CreateJwtClaims(loginResult.Identity));
 
             return new AuthenticateResultModel
@@ -213,7 +223,7 @@ namespace EdwardAbp.Controllers
         {
             var claims = identity.Claims.ToList();
             var nameIdClaim = claims.First(c => c.Type == ClaimTypes.NameIdentifier);
-
+            //ou
             // Specifically add the jti (random nonce), iat (issued timestamp), and sub (subject/user) claims.
             claims.AddRange(new[]
             {

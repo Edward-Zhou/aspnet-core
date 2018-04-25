@@ -2,6 +2,9 @@
 using Microsoft.Extensions.Options;
 using Abp.Authorization;
 using EdwardAbp.Authorization.Roles;
+using System.Security.Claims;
+using System.Threading.Tasks;
+using System.Linq;
 
 namespace EdwardAbp.Authorization.Users
 {
@@ -16,6 +19,13 @@ namespace EdwardAbp.Authorization.Users
                   roleManager,
                   optionsAccessor)
         {
+        }
+
+        public override async Task<ClaimsPrincipal> CreateAsync(User user)
+        {
+            var claims = await base.CreateAsync(user);
+            claims.Identities.First().AddClaim(new Claim("ou","1"));
+            return claims;
         }
     }
 }

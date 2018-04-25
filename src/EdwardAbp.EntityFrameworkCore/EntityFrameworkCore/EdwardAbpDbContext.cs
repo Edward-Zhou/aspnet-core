@@ -26,11 +26,11 @@ namespace EdwardAbp.EntityFrameworkCore
 
         protected virtual long? GetCurrentOrganizationUnitIdOrNull()
         {
-            if (CurrentUnitOfWorkProvider != null &&
-                CurrentUnitOfWorkProvider.Current != null)
-            {
-                return ((CustomActiveUnitOfWork)CurrentUnitOfWorkProvider.Current).GetOrganizationUnitId();
-            }
+            //if (CurrentUnitOfWorkProvider != null &&
+            //    CurrentUnitOfWorkProvider.Current != null)
+            //{
+            //    return ((CustomActiveUnitOfWork)CurrentUnitOfWorkProvider.Current).GetOrganizationUnitId();
+            //}
             return ((ICustomAbpSession)AbpSession).OrganizationUnitId;
         }
         protected virtual bool IsMayHaveOrganizationUnitFilterEnabled => true;

@@ -4,8 +4,10 @@ using Abp.MultiTenancy;
 using Abp.Runtime;
 using Abp.Runtime.Session;
 using EdwardAbp.Authorization.Users;
+using EdwardAbp.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace EdwardAbp
@@ -14,26 +16,37 @@ namespace EdwardAbp
     {
         long? OrganizationUnitId { get; }
         long? ImpersonatorOrganizationUnitId { get; }
-        //IDisposable Use(int? tenantId, long? ImpersonatorOrganizationUnitId, long? userId);
+        IDisposable Use(int? tenantId, long? organizationUnitId, long? userId);
     }
     public class CustomAbpSession : ClaimsAbpSession, ICustomAbpSession
     {
         private readonly IRepository<User, long> _userRepository;
+        private readonly IAmbientScopeProvider<CustomSessionOverride> _customSessionOverrideScopeProvider;
         public CustomAbpSession(IRepository<User, long> userRepository,
             IPrincipalAccessor principalAccessor,
             IMultiTenancyConfig multiTenancy,
             ITenantResolver tenantResolver,
-            IAmbientScopeProvider<SessionOverride> sessionOverrideScopeProvider):base(principalAccessor, multiTenancy, tenantResolver, sessionOverrideScopeProvider)
+            IAmbientScopeProvider<SessionOverride> sessionOverrideScopeProvider,
+            IAmbientScopeProvider<CustomSessionOverride> customSessionOverrideScopeProvider) :base(principalAccessor, multiTenancy, tenantResolver, sessionOverrideScopeProvider)
         {
             _userRepository = userRepository;
+            CustomSessionOverrideScopeProvider = customSessionOverrideScopeProvider;
         }
+        protected new CustomSessionOverride OverridedValue => CustomSessionOverrideScopeProvider.GetValue("CustomSessionOverride");
+        protected IAmbientScopeProvider<CustomSessionOverride> CustomSessionOverrideScopeProvider { get; }
+
         public virtual long? OrganizationUnitId
         {
             get {
-                if (UserId != null)
+                if (OverridedValue != null)
                 {
-                    var user = _userRepository.Get(UserId.Value);
-                    return 4;
+                    return (OverridedValue).OrganizationUnitId;
+                }
+
+                var tenantIdClaim = PrincipalAccessor.Principal?.Claims.FirstOrDefault(c => c.Type == "OU");
+                if (!string.IsNullOrEmpty(tenantIdClaim?.Value))
+                {
+                    return Convert.ToInt32(tenantIdClaim.Value);
                 }
                 return null;
             }
@@ -41,12 +54,14 @@ namespace EdwardAbp
 
         public long? ImpersonatorOrganizationUnitId => throw new NotImplementedException();
 
-        //public IDisposable Use(int? tenantId, long? organizationUnitId, long? userId)
+        //public new IDisposable Use(int? tenantId, long? userId)
         //{
-        //    //TenantId = tenantId;
-        //    //OrganizationUnitId = organizationUnitId;
-        //    //UserId = userId;
-        //    return IDisposab
+        //    return SessionOverrideScopeProvider.BeginScope(SessionOverrideContextKey, new SessionOverride(tenantId, userId));
         //}
+
+        public IDisposable Use(int? tenantId, long? organizationUnitId, long? userId)
+        {
+            return CustomSessionOverrideScopeProvider.BeginScope("CustomSessionOverride", new CustomSessionOverride(tenantId, userId, organizationUnitId));
+        }
     }
 }
