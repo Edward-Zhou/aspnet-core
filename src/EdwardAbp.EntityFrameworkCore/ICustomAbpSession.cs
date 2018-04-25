@@ -34,6 +34,35 @@ namespace EdwardAbp
         }
         protected new CustomSessionOverride OverridedValue => CustomSessionOverrideScopeProvider.GetValue("CustomSessionOverride");
         protected IAmbientScopeProvider<CustomSessionOverride> CustomSessionOverrideScopeProvider { get; }
+        public override int? TenantId
+        {
+            get
+            {
+                if (!MultiTenancy.IsEnabled)
+                {
+                    return MultiTenancyConsts.DefaultTenantId;
+                }
+
+                if (OverridedValue != null)
+                {
+                    return OverridedValue.TenantId;
+                }
+
+                var tenantIdClaim = PrincipalAccessor.Principal?.Claims.FirstOrDefault(c => c.Type == "test");
+                if (!string.IsNullOrEmpty(tenantIdClaim?.Value))
+                {
+                    return Convert.ToInt32(tenantIdClaim.Value);
+                }
+
+                if (UserId == null)
+                {
+                    //Resolve tenant id from request only if user has not logged in!
+                    return TenantResolver.ResolveTenantId();
+                }
+
+                return null;
+            }
+        }
 
         public virtual long? OrganizationUnitId
         {
