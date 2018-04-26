@@ -33,7 +33,7 @@ namespace EdwardAbp.EntityFrameworkCore
             //}
             return ((ICustomAbpSession)AbpSession).OrganizationUnitId;
         }
-        protected virtual bool IsMayHaveOrganizationUnitFilterEnabled => true;
+        protected virtual bool IsMayHaveOrganizationUnitFilterEnabled => CurrentOrganizationUnitId != null && CurrentUnitOfWorkProvider?.Current?.IsFilterEnabled("MayHaveOrganizationUnit") == true;
 
         protected override bool ShouldFilterEntity<TEntity>(IMutableEntityType entityType)
         {
@@ -48,7 +48,8 @@ namespace EdwardAbp.EntityFrameworkCore
             Expression<Func<TEntity, bool>> expression = null;
             if (typeof(IMayHaveOrganizationUnit).IsAssignableFrom(typeof(TEntity)))
             {
-                Expression<Func<TEntity, bool>> mayHaveOUFilter = e => ((IMayHaveOrganizationUnit)e).OrganizationUnitId == CurrentOrganizationUnitId || (((IMayHaveOrganizationUnit)e).OrganizationUnitId == CurrentOrganizationUnitId) == IsMayHaveOrganizationUnitFilterEnabled;
+                Expression<Func<TEntity, bool>> mayHaveOUFilter = e => ((IMayHaveOrganizationUnit)e).OrganizationUnitId == CurrentOrganizationUnitId 
+                || (((IMayHaveOrganizationUnit)e).OrganizationUnitId == CurrentOrganizationUnitId) == IsMayHaveOrganizationUnitFilterEnabled;
                 expression = expression == null ? mayHaveOUFilter : CombineExpressions(expression, mayHaveOUFilter);
             }
 

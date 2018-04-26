@@ -17,6 +17,7 @@ namespace EdwardAbp.Products
         }
         public List<Product> GetAll()
         {
+            var r3 = _productRepositry.GetAll().ToList();
             using (CurrentUnitOfWork.SetTenantId(1))
             {
                 var result1 = _productRepositry.GetAll().ToList();
