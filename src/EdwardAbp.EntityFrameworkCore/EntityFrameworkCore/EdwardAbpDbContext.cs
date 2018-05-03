@@ -20,6 +20,8 @@ namespace EdwardAbp.EntityFrameworkCore
         {
         }
         public DbSet<Product> Products { get; set; }
+        public DbSet<ProductType> ProductType { get; set; }
+        public DbSet<PType> PType { get; set; }
 
         public virtual bool SuppressAutoSetOrganizationUnitId { get; set; }
         protected virtual long? CurrentOrganizationUnitId => GetCurrentOrganizationUnitIdOrNull();

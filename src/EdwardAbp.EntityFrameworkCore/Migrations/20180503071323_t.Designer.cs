@@ -16,9 +16,10 @@ using System;
 namespace EdwardAbp.Migrations
 {
     [DbContext(typeof(EdwardAbpDbContext))]
-    partial class EdwardAbpDbContextModelSnapshot : ModelSnapshot
+    [Migration("20180503071323_t")]
+    partial class t
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -1062,15 +1063,13 @@ namespace EdwardAbp.Migrations
 
                     b.Property<long?>("OrganizationUnitId");
 
-                    b.Property<int?>("PTypeId");
-
                     b.Property<int?>("ProductTypeId");
 
                     b.Property<int?>("TenantId");
 
-                    b.HasKey("Id");
+                    b.Property<string>("Type");
 
-                    b.HasIndex("PTypeId");
+                    b.HasKey("Id");
 
                     b.HasIndex("ProductTypeId");
 
@@ -1103,34 +1102,6 @@ namespace EdwardAbp.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("ProductType");
-                });
-
-            modelBuilder.Entity("EdwardAbp.PType", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<DateTime>("CreationTime");
-
-                    b.Property<long?>("CreatorUserId");
-
-                    b.Property<long?>("DeleterUserId");
-
-                    b.Property<DateTime?>("DeletionTime");
-
-                    b.Property<bool>("IsDeleted");
-
-                    b.Property<DateTime?>("LastModificationTime");
-
-                    b.Property<long?>("LastModifierUserId");
-
-                    b.Property<string>("Name");
-
-                    b.Property<int?>("TenantId");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("PType");
                 });
 
             modelBuilder.Entity("Abp.Application.Features.EditionFeatureSetting", b =>
@@ -1305,10 +1276,6 @@ namespace EdwardAbp.Migrations
 
             modelBuilder.Entity("EdwardAbp.Product", b =>
                 {
-                    b.HasOne("EdwardAbp.PType", "PType")
-                        .WithMany("Products")
-                        .HasForeignKey("PTypeId");
-
                     b.HasOne("EdwardAbp.ProductType", "ProductType")
                         .WithMany("Products")
                         .HasForeignKey("ProductTypeId");

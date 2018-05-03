@@ -14,5 +14,11 @@ namespace EdwardAbp
         public virtual int? TenantId { get; set; }
         public virtual long? OrganizationUnitId { get; set; }
         public string Name { get; set; }
+        public int? ProductTypeId { get; set; }
+        public ProductType ProductType { get; set; }
+        //public string  Type { get; set; }
+        public int? PTypeId { get; set; }
+        public PType PType { get; set; }
+
     }
 }
