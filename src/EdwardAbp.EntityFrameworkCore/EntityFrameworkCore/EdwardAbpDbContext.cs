@@ -23,6 +23,8 @@ namespace EdwardAbp.EntityFrameworkCore
         public DbSet<ProductType> ProductType { get; set; }
         public DbSet<PType> PType { get; set; }
 
+        public ICustomAbpSession CustomAbpSession => AbpSession as ICustomAbpSession;
+
         public virtual bool SuppressAutoSetOrganizationUnitId { get; set; }
         protected virtual long? CurrentOrganizationUnitId => GetCurrentOrganizationUnitIdOrNull();
 
@@ -33,7 +35,7 @@ namespace EdwardAbp.EntityFrameworkCore
             //{
             //    return ((CustomActiveUnitOfWork)CurrentUnitOfWorkProvider.Current).GetOrganizationUnitId();
             //}
-            return ((ICustomAbpSession)AbpSession).OrganizationUnitId;
+            return CustomAbpSession.OrganizationUnitId;
         }
         protected virtual bool IsMayHaveOrganizationUnitFilterEnabled => CurrentOrganizationUnitId != null && CurrentUnitOfWorkProvider?.Current?.IsFilterEnabled("MayHaveOrganizationUnit") == true;
 

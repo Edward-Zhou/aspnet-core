@@ -11,6 +11,7 @@ using Abp.Zero.Configuration;
 using Abp.Zero.EntityFrameworkCore;
 using EdwardAbp.EntityFrameworkCore;
 using EdwardAbp.Tests.DependencyInjection;
+using Abp.Runtime.Session;
 
 namespace EdwardAbp.Tests
 {
@@ -28,7 +29,8 @@ namespace EdwardAbp.Tests
         }
 
         public override void PreInitialize()
-        {
+        {            
+            Configuration.IocManager.Register<IAbpSession, CustomTestSession>(DependencyLifeStyle.Singleton);
             Configuration.UnitOfWork.Timeout = TimeSpan.FromMinutes(30);
             Configuration.UnitOfWork.IsTransactional = false;
 
@@ -43,11 +45,14 @@ namespace EdwardAbp.Tests
             RegisterFakeService<AbpZeroDbMigrator<EdwardAbpDbContext>>();
 
             Configuration.ReplaceService<IEmailSender, NullEmailSender>(DependencyLifeStyle.Transient);
+            
         }
 
         public override void Initialize()
         {
             ServiceCollectionRegistrar.Register(IocManager);
+            //Configuration.ReplaceService<IAbpSession, CustomTestSession>(DependencyLifeStyle.Singleton);
+
         }
 
         private void RegisterFakeService<TService>() where TService : class

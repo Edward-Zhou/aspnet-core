@@ -1,4 +1,5 @@
-﻿using Abp.Domain.Repositories;
+﻿using Abp.Collections.Extensions;
+using Abp.Domain.Repositories;
 using Abp.Domain.Uow;
 using System;
 using System.Collections.Generic;
@@ -7,7 +8,7 @@ using System.Text;
 
 namespace EdwardAbp.Products
 {
-    public class ProductAppService: EdwardAbpAppServiceBase
+    public class ProductAppService: EdwardAbpAppServiceBase, IProductAppService
     {
         private readonly IRepository<Product, long> _productRepositry;
         public IUnitOfWorkManager _unitOfWorkManager;
@@ -17,7 +18,12 @@ namespace EdwardAbp.Products
         }
         public List<Product> GetAll()
         {
-            var r3 = _productRepositry.GetAll().ToList();
+            var r3 = _productRepositry
+                        .GetAll()
+                        .WhereIfIgnore(true, p => p.Name.Contains("p")).ToList();
+            //.Where(p => p.Name.Contains("a"))
+            //.WhereIf(true,p => p.Name.Contains("p")).ToList();
+            var ouId = CustomAbpSession.OrganizationUnitId;
             using (CurrentUnitOfWork.SetTenantId(1))
             {
                 var result1 = _productRepositry.GetAll().ToList();

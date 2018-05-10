@@ -14,11 +14,14 @@ using EdwardAbp.EntityFrameworkCore;
 using EdwardAbp.EntityFrameworkCore.Seed.Host;
 using EdwardAbp.EntityFrameworkCore.Seed.Tenants;
 using EdwardAbp.MultiTenancy;
+using Abp.Dependency;
+using Castle.MicroKernel.Registration;
 
 namespace EdwardAbp.Tests
 {
     public abstract class EdwardAbpTestBase : AbpIntegratedTestBase<EdwardAbpTestModule>
     {
+        public CustomTestSession CustomTestSession { get; set; }
         protected EdwardAbpTestBase()
         {
             void NormalizeDbContext(EdwardAbpDbContext context)
@@ -27,9 +30,10 @@ namespace EdwardAbp.Tests
                 context.EventBus = NullEventBus.Instance;
                 context.SuppressAutoSetTenantId = true;
             }
-
+            //CustomTestSession = ServiceProvider.Resolve<ICustomAbpSession>();
             // Seed initial data for host
-            AbpSession.TenantId = null;
+            CustomTestSession.TenantId = null;
+            //CustomTestSession.OrganizationUnitId = 10;
             UsingDbContext(context =>
             {
                 NormalizeDbContext(context);
@@ -38,7 +42,7 @@ namespace EdwardAbp.Tests
             });
 
             // Seed initial data for default tenant
-            AbpSession.TenantId = 1;
+            //AbpSession.TenantId = 1;
             UsingDbContext(context =>
             {
                 NormalizeDbContext(context);
@@ -46,6 +50,20 @@ namespace EdwardAbp.Tests
             });
 
             LoginAsDefaultTenantAdmin();
+        }
+
+        protected override void PreInitialize()
+        {
+
+            base.PreInitialize();
+            //LocalIocManager.RegisterIfNot<IPrincipalAccessor, AspNetCorePrincipalAccessor>(DependencyLifeStyle.Transient);
+        }
+        protected override void PostInitialize()
+        {
+            base.PostInitialize();
+            //LocalIocManager.Register<IAbpSession, CustomTestSession>(DependencyLifeStyle.Singleton);
+           
+            CustomTestSession = LocalIocManager.Resolve<CustomTestSession>();
         }
 
         #region UsingDbContext
@@ -171,7 +189,7 @@ namespace EdwardAbp.Tests
                 throw new Exception("There is no tenant: " + tenancyName);
             }
 
-            AbpSession.TenantId = tenant.Id;
+            CustomTestSession.TenantId = tenant.Id;
 
             var user =
                 UsingDbContext(
@@ -182,7 +200,9 @@ namespace EdwardAbp.Tests
                 throw new Exception("There is no user: " + userName + " for tenant: " + tenancyName);
             }
 
-            AbpSession.UserId = user.Id;
+            CustomTestSession.UserId = user.Id;
+
+            CustomTestSession.OrganizationUnitId = 10;
         }
 
         #endregion

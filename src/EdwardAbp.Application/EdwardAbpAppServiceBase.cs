@@ -18,6 +18,8 @@ namespace EdwardAbp
 
         public UserManager UserManager { get; set; }
 
+        public ICustomAbpSession CustomAbpSession => AbpSession as ICustomAbpSession;
+
         protected EdwardAbpAppServiceBase()
         {
             LocalizationSourceName = EdwardAbpConsts.LocalizationSourceName;
