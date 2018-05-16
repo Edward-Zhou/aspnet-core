@@ -9,6 +9,10 @@ using Abp.Organizations;
 using Abp.Domain.Uow;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Abp;
+using Abp.Domain.Entities;
+using Abp.Extensions;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
+using Abp.Events.Bus.Entities;
 
 namespace EdwardAbp.EntityFrameworkCore
 {
@@ -66,5 +70,41 @@ namespace EdwardAbp.EntityFrameworkCore
             base.OnModelCreating(modelBuilder);
             //modelBuilder.Entity<Product>().HasQueryFilter(b => EF.Property<long?>(b, "OrganizationUnitId") == CurrentOrganizationUnitId);
         }
+        protected override void ApplyAbpConceptsForAddedEntity(EntityEntry entry, long? userId, EntityChangeReport changeReport)
+        {
+            CheckAndSetMayHaveTenantIdProperty(entry.Entity);
+            base.ApplyAbpConceptsForAddedEntity(entry, userId, changeReport);
+        }
+
+        protected virtual void CheckAndSetMayHaveTenantIdProperty(object entityAsObj)
+        {
+            if (SuppressAutoSetTenantId)
+            {
+                return;
+            }
+
+            //Only works for single tenant applications
+            if (MultiTenancyConfig?.IsEnabled ?? false)
+            {
+                return;
+            }
+
+            //Only set IMayHaveTenant entities
+            if (!(entityAsObj is IMayHaveTenant))
+            {
+                return;
+            }
+
+            var entity = entityAsObj.As<IMayHaveTenant>();
+
+            //Don't set if it's already set
+            if (entity.TenantId != null)
+            {
+                return;
+            }
+
+            entity.TenantId = GetCurrentTenantIdOrNull();
+        }
+
     }
 }

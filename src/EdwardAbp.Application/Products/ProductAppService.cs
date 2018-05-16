@@ -16,8 +16,19 @@ namespace EdwardAbp.Products
         {
             _productRepositry = productRepositry;
         }
+        public ProductManager ProductManager { get; set; }
         public List<Product> GetAll()
         {
+            var ourResult1 = ProductManager.Products.ToList();
+            //using (CurrentUnitOfWork.DisableFilter(1))
+            //{
+            //    var result1 = _productRepositry.GetAll().ToList();
+            //    using (((CustomActiveUnitOfWork)CurrentUnitOfWork).SetOrganizationUnitId(3))
+            //    {
+            //        var result11 = _productRepositry.GetAll().ToList();
+            //    }
+            //}
+
             var r3 = _productRepositry
                         .GetAll()
                         .WhereIfIgnore(true, p => p.Name.Contains("p")).ToList();
@@ -37,6 +48,11 @@ namespace EdwardAbp.Products
                 var result2 = _productRepositry.GetAll().ToList();
             }
             return _productRepositry.GetAll().ToList();
+        }
+        public Product Create(Product product)
+        {
+            _productRepositry.Insert(product);
+            return product;
         }
     }
 }

@@ -31,9 +31,9 @@ namespace EdwardAbp.Tests
         public override void PreInitialize()
         {
        
-            Configuration.IocManager.IocContainer.Register(
-                   Component.For<IAbpSession>().ImplementedBy<CustomTestSession>().LifestyleSingleton()
-                );
+            //Configuration.IocManager.IocContainer.Register(
+            //       Component.For<IAbpSession>().ImplementedBy<CustomTestSession>().LifestyleSingleton()
+            //    );
             //Configuration.IocManager.Register<IAbpSession, CustomTestSession>(DependencyLifeStyle.Singleton);
             Configuration.UnitOfWork.Timeout = TimeSpan.FromMinutes(30);
             Configuration.UnitOfWork.IsTransactional = false;
