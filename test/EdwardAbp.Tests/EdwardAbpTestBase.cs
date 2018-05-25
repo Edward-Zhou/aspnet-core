@@ -61,7 +61,7 @@ namespace EdwardAbp.Tests
         protected override void PostInitialize()
         {
             base.PostInitialize();
-            //LocalIocManager.Register<IAbpSession, CustomTestSession>(DependencyLifeStyle.Singleton);
+            LocalIocManager.Register<IAbpSession, CustomTestSession>(DependencyLifeStyle.Singleton);
            
             CustomTestSession = LocalIocManager.Resolve<CustomTestSession>();
         }
