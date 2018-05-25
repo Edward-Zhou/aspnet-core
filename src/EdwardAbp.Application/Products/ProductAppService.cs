@@ -16,8 +16,11 @@ namespace EdwardAbp.Products
         {
             _productRepositry = productRepositry;
         }
+        public ProductManager ProductManager { get; set; }
         public List<Product> GetAll()
         {
+
+
             var r3 = _productRepositry
                         .GetAll()
                         .WhereIfIgnore(true, p => p.Name.Contains("p")).ToList();
@@ -26,6 +29,9 @@ namespace EdwardAbp.Products
             var ouId = CustomAbpSession.OrganizationUnitId;
             using (CurrentUnitOfWork.SetTenantId(1))
             {
+                var result = ProductManager.ProductRepository.GetAll().ToList();
+                var ourResult1 = ProductManager.Products.ToList();
+
                 var result1 = _productRepositry.GetAll().ToList();
                 using (((CustomActiveUnitOfWork)CurrentUnitOfWork).SetOrganizationUnitId(3))
                 {
@@ -37,6 +43,11 @@ namespace EdwardAbp.Products
                 var result2 = _productRepositry.GetAll().ToList();
             }
             return _productRepositry.GetAll().ToList();
+        }
+        public Product Create(Product product)
+        {
+            _productRepositry.Insert(product);
+            return product;
         }
     }
 }
