@@ -16,9 +16,10 @@ using System;
 namespace EdwardAbp.Migrations
 {
     [DbContext(typeof(EdwardAbpDbContext))]
-    partial class EdwardAbpDbContextModelSnapshot : ModelSnapshot
+    [Migration("20180604083939_order")]
+    partial class order
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

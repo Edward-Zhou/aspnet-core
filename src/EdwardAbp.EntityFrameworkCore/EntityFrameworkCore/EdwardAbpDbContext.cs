@@ -13,6 +13,7 @@ using Abp.Domain.Entities;
 using Abp.Extensions;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Abp.Events.Bus.Entities;
+using EdwardAbp.Orders;
 
 namespace EdwardAbp.EntityFrameworkCore
 {
@@ -26,6 +27,8 @@ namespace EdwardAbp.EntityFrameworkCore
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductType> ProductType { get; set; }
         public DbSet<PType> PType { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderItem> OrderItems { get; set; }
 
         public ICustomAbpSession CustomAbpSession => AbpSession as ICustomAbpSession;
 
