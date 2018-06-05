@@ -1,5 +1,6 @@
 ﻿using Abp.Application.Services.Dto;
 using Abp.Domain.Repositories;
+using EdwardAbp.Extensions;
 using EdwardAbp.Orders.Dtos;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -18,6 +19,9 @@ namespace EdwardAbp.Orders
         }
         public async Task<List<OrderDto>> GetOrders()
         {
+            int orderStatus = 2;
+            int r = (int)EdwardExtension.ToValue<OrderStatus>("发货1");
+            string status = ((OrderStatus)orderStatus).ToDisplayName();
             var orders = await _orderRepository.GetAll().Include(o => o.OrderItems).ToListAsync();
             return ObjectMapper.Map<List<OrderDto>>(orders);
         }

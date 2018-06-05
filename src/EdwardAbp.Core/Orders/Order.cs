@@ -3,6 +3,7 @@ using Abp.Domain.Entities.Auditing;
 using Abp.Organizations;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
 namespace EdwardAbp.Orders
@@ -66,5 +67,14 @@ namespace EdwardAbp.Orders
         public long? AddressId { get; set; }
 
         public virtual ICollection<OrderItem> OrderItems { get; set; }
+    }
+
+    public enum OrderStatus
+    {
+        [DisplayName("等待付款")]
+        WaitFor = 1,
+        [DisplayName("发货")]
+        Sent,
+        Other = -1
     }
 }
