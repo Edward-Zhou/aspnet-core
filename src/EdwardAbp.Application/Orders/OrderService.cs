@@ -1,7 +1,9 @@
 ﻿using Abp.Application.Services.Dto;
 using Abp.Domain.Repositories;
+using EdwardAbp.EntityFrameworkCore;
 using EdwardAbp.Extensions;
 using EdwardAbp.Orders.Dtos;
+using EFCore.BulkExtensions;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -12,6 +14,7 @@ namespace EdwardAbp.Orders
 {
     public class OrderService : EdwardAbpAppServiceBase
     {
+        public EdwardAbpDbContext EdwardAbpDbContext { get; set; }
         private readonly IRepository<Order, long> _orderRepository;
         public OrderService(IRepository<Order, long> orderRepository)
         {
@@ -33,6 +36,20 @@ namespace EdwardAbp.Orders
                 await _orderRepository.InsertAsync(order);
                 return ObjectMapper.Map<OrderDto>(order);
             }
+        }
+        public async Task BluckInsert()
+        {
+            var orders = new List<Product>();
+            for (int i = 0; i < 1000; i++)
+            {
+                orders.Add(new Product {  Name = "P" + i.ToString() });
+            }
+            using (var transaction = EdwardAbpDbContext.Database.BeginTransaction())
+            {
+                EdwardAbpDbContext.BulkInsert(orders);
+                transaction.Commit();
+            }
+
         }
         public async Task DeleteOrder(EntityDto<long> input)
         {

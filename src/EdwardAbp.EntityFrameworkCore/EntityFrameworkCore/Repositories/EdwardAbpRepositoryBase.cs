@@ -1,6 +1,8 @@
 ﻿using Abp.Domain.Entities;
 using Abp.EntityFrameworkCore;
 using Abp.EntityFrameworkCore.Repositories;
+using EFCore.BulkExtensions;
+using System.Collections.Generic;
 
 namespace EdwardAbp.EntityFrameworkCore.Repositories
 {
@@ -18,6 +20,14 @@ namespace EdwardAbp.EntityFrameworkCore.Repositories
         }
 
         // Add your common methods for all repositories
+        public void InsertBluck(List<TEntity> entities)
+        {
+            using (var transaction = Context.Database.BeginTransaction())
+            {
+                Context.BulkInsert(entities);
+                transaction.Commit();
+            }
+        }
     }
 
     /// <summary>
