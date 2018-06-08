@@ -14,9 +14,19 @@ using Abp.Extensions;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Abp.Events.Bus.Entities;
 using EdwardAbp.Orders;
-
+using Abp.Domain.Repositories;
+using EdwardAbp.EntityFrameworkCore.Repositories;
 namespace EdwardAbp.EntityFrameworkCore
 {
+    //[AutoRepositoryTypes(
+    //     //typeof(ICustomRepository<>),
+    //     //typeof(ICustomRepository<,>),
+    //     typeof(IRepository<>),
+    //     typeof(IRepository<,>),
+    //     typeof(CustomRepository<>),
+    //     typeof(CustomRepository<,>)
+
+    //    )]
     public class EdwardAbpDbContext : AbpZeroDbContext<Tenant, Role, User, EdwardAbpDbContext>
     {
         /* Define a DbSet for each entity of the application */

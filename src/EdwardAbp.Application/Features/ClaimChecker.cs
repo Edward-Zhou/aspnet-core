@@ -49,13 +49,18 @@ namespace EdwardAbp.Features
         {
             var feature = _claimManager.Get(name);
 
-            var value = await FeatureValueStore.GetValueOrNullAsync(tenantId, feature);
+            var value = "Tets";//= await FeatureValueStore.GetValueOrNullAsync(tenantId, feature);
             if (value == null)
             {
                 return feature.DefaultValue;
             }
 
             return value;
+        }
+
+        public Task<string> GetValueAsync(int tenantId, long? organizationUnitId, string name)
+        {
+            throw new NotImplementedException();
         }
     }
 }

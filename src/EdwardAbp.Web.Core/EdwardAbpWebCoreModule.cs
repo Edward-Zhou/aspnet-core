@@ -17,6 +17,8 @@ using Abp.Domain.Uow;
 using Abp.EntityFrameworkCore.Uow;
 using Castle.MicroKernel.Registration;
 using Abp.EntityFrameworkCore;
+using EdwardAbp.EntityFrameworkCore.Repositories;
+using Abp.Domain.Repositories;
 
 #if FEATURE_SIGNALR
 using Abp.Web.SignalR;
@@ -60,6 +62,16 @@ namespace EdwardAbp
             {
                 IocManager.Register<IUnitOfWork, CustomActiveUnitOfWork>(DependencyLifeStyle.Transient);
             });
+            IocManager.IocContainer.Register(
+            Component.For(typeof(ICustomRepository<>))
+                .ImplementedBy(typeof(CustomRepository<>))
+                .LifestyleTransient()
+            );
+            IocManager.IocContainer.Register(
+            Component.For(typeof(ICustomRepository<,>))
+                .ImplementedBy(typeof(CustomRepository<,>))
+                .LifestyleTransient()
+            );
 
             IocManager.IocContainer.Register(
             Component.For(typeof(IDbContextProvider<>))

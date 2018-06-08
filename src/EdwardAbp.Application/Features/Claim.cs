@@ -16,7 +16,7 @@ namespace EdwardAbp.Features
         /// <param name="key">Key</param>
         public object this[string key]
         {
-            get => Attributes.GetOrDefault(key);
+            //get => Attributes.GetOrDefault(key);
             set => Attributes[key] = value;
         }
 

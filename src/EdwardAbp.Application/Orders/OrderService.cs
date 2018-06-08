@@ -1,6 +1,7 @@
 ﻿using Abp.Application.Services.Dto;
 using Abp.Domain.Repositories;
 using EdwardAbp.EntityFrameworkCore;
+using EdwardAbp.EntityFrameworkCore.Repositories;
 using EdwardAbp.Extensions;
 using EdwardAbp.Orders.Dtos;
 using EFCore.BulkExtensions;
@@ -14,11 +15,14 @@ namespace EdwardAbp.Orders
 {
     public class OrderService : EdwardAbpAppServiceBase
     {
-        public EdwardAbpDbContext EdwardAbpDbContext { get; set; }
+        private readonly ICustomRepository<Product, long> CustomRepository;
         private readonly IRepository<Order, long> _orderRepository;
-        public OrderService(IRepository<Order, long> orderRepository)
+        private readonly IRepository<Product, long> _productRepository;
+        public OrderService(IRepository<Order, long> orderRepository, IRepository<Product, long> productRepository, ICustomRepository<Product, long> CustomRepository)
         {
             _orderRepository = orderRepository;
+            _productRepository = productRepository;
+            this.CustomRepository = CustomRepository;
         }
         public async Task<List<OrderDto>> GetOrders()
         {
@@ -44,11 +48,29 @@ namespace EdwardAbp.Orders
             {
                 orders.Add(new Product {  Name = "P" + i.ToString() });
             }
-            using (var transaction = EdwardAbpDbContext.Database.BeginTransaction())
+            System.Diagnostics.Stopwatch stopwatch = new System.Diagnostics.Stopwatch();
+            stopwatch.Start();
+            foreach (var item in orders)
             {
-                EdwardAbpDbContext.BulkInsert(orders);
-                transaction.Commit();
+                await _productRepository.InsertAsync(item);
             }
+            await CurrentUnitOfWork.SaveChangesAsync();
+            stopwatch.Stop();
+            var r2 = stopwatch.ElapsedMilliseconds;
+            stopwatch.Restart();
+            //await CurrentUnitOfWork.GetDbContext<EdwardAbpDbContext>().BulkInsertAsync(orders);
+            //await CurrentUnitOfWork.SaveChangesAsync();
+            //stopwatch.Stop();
+            //var r1 = stopwatch.ElapsedMilliseconds;
+            //stopwatch.Restart();
+
+            await CustomRepository.BulkInsertAsync(orders);
+            await CurrentUnitOfWork.SaveChangesAsync();
+
+            stopwatch.Stop();
+            var r3 = stopwatch.ElapsedMilliseconds;
+
+            //_orderRepository.InsertBluck(orders);
 
         }
         public async Task DeleteOrder(EntityDto<long> input)

@@ -2,6 +2,7 @@
 using Abp.Modules;
 using Abp.Reflection.Extensions;
 using EdwardAbp.Authorization;
+using EdwardAbp.EntityFrameworkCore.Repositories;
 
 namespace EdwardAbp
 {
@@ -14,6 +15,7 @@ namespace EdwardAbp
         {
             Configuration.Authorization.Providers.Add<EdwardAbpAuthorizationProvider>();
         }
+
 
         public override void Initialize()
         {
