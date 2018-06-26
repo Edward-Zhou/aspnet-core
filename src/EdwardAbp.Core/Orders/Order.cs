@@ -66,7 +66,7 @@ namespace EdwardAbp.Orders
         //public Address Address { get; set; }
         public long? AddressId { get; set; }
 
-        public virtual ICollection<OrderItem> OrderItems { get; set; }
+        public virtual List<OrderItem> OrderItems { get; set; }
     }
 
     public enum OrderStatus

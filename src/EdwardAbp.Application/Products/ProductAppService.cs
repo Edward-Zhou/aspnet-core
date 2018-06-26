@@ -1,6 +1,7 @@
 ﻿using Abp.Collections.Extensions;
 using Abp.Domain.Repositories;
 using Abp.Domain.Uow;
+using EdwardAbp.EntityFrameworkCore.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -44,8 +45,11 @@ namespace EdwardAbp.Products
             }
             return _productRepositry.GetAll().ToList();
         }
+        public ICustomRepository<Product,long> ProductRepository { get; set; }
         public Product Create(Product product)
         {
+            var result = ProductRepository.PagedResult("Select Count(Id) from AbpProducts;Select * from AbpProducts");
+            //ProductRepository.Connection.Query
             _productRepositry.Insert(product);
             return product;
         }

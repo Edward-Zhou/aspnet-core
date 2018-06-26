@@ -15,6 +15,9 @@
     <DefineConstants>FEATURE_SIGNALR_ASPNETCORE</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="dapper" Version="1.50.5" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\EdwardAbp.Core\EdwardAbp.Core.csproj" />
     <ProjectReference Include="..\EdwardAbp.EntityFrameworkCore\EdwardAbp.EntityFrameworkCore.csproj" />
   </ItemGroup>

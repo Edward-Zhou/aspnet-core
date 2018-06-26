@@ -1,8 +1,11 @@
 ﻿using Abp.Domain.Entities;
 using Abp.EntityFrameworkCore;
 using Abp.EntityFrameworkCore.Repositories;
+using Dapper;
 using EFCore.BulkExtensions;
 using System.Collections.Generic;
+using System.Data;
+using static Dapper.SqlMapper;
 
 namespace EdwardAbp.EntityFrameworkCore.Repositories
 {
@@ -16,18 +19,21 @@ namespace EdwardAbp.EntityFrameworkCore.Repositories
     {
         protected EdwardAbpRepositoryBase(IDbContextProvider<EdwardAbpDbContext> dbContextProvider)
             : base(dbContextProvider)
-        {
+        {  
+            
         }
 
-        // Add your common methods for all repositories
-        public void InsertBluck(List<TEntity> entities)
+        protected virtual GridReader QueryMultiple(string sql, object param = null, IDbTransaction transaction = null, int? commandTimeout = null, CommandType? commandType = null)
         {
-            using (var transaction = Context.Database.BeginTransaction())
-            {
-                Context.BulkInsert(entities);
-                transaction.Commit();
-            }
+            return Connection.QueryMultiple(sql, param, transaction, commandTimeout, commandType);
         }
+
+
+
+        //protected virtual 
+
+        // Add your common methods for all repositories
+
     }
 
     /// <summary>

@@ -9,7 +9,7 @@ namespace EdwardAbp.Orders
 {
     public class OrderItem : FullAuditedEntity, IMustHaveTenant, IMayHaveOrganizationUnit
     {
-
+        //public string OuterId { get; set; }
         public long OrderId { get; set; }
 
         public virtual Order Order { get; set; }

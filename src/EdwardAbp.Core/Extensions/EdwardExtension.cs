@@ -33,5 +33,13 @@ namespace EdwardAbp.Extensions
                             .First()
                             .GetCustomAttribute<TAttribute>();
         }
+        public static StringBuilder AppendLineIf(this StringBuilder builder, string value)
+        {
+            if (String.IsNullOrEmpty(value))
+            {
+                return builder;
+            }
+            return builder.AppendLine(value);
+        }
     }
 }
