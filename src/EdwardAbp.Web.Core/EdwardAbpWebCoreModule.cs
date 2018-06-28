@@ -19,6 +19,7 @@ using Castle.MicroKernel.Registration;
 using Abp.EntityFrameworkCore;
 using EdwardAbp.EntityFrameworkCore.Repositories;
 using Abp.Domain.Repositories;
+using Abp.Runtime.Caching.Redis;
 
 #if FEATURE_SIGNALR
 using Abp.Web.SignalR;
@@ -31,7 +32,8 @@ namespace EdwardAbp
     [DependsOn(
          typeof(EdwardAbpApplicationModule),
          typeof(EdwardAbpEntityFrameworkModule),
-         typeof(AbpAspNetCoreModule)
+         typeof(AbpAspNetCoreModule),
+         typeof(AbpRedisCacheModule)
 #if FEATURE_SIGNALR 
         ,typeof(AbpWebSignalRModule)
 #elif FEATURE_SIGNALR_ASPNETCORE
@@ -58,6 +60,9 @@ namespace EdwardAbp
             //{
             //    IocManager.Register<IActiveUnitOfWork, CustomActiveUnitOfWork>(DependencyLifeStyle.Transient);
             //});
+            Configuration.Caching.Configure("Product", cache => {
+                cache.DefaultSlidingExpireTime = TimeSpan.FromHours(2);
+            });
             Configuration.ReplaceService(typeof(IUnitOfWork), () =>
             {
                 IocManager.Register<IUnitOfWork, CustomActiveUnitOfWork>(DependencyLifeStyle.Transient);
