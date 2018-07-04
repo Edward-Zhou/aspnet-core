@@ -98,7 +98,7 @@ namespace EdwardAbp.Web.Host.Startup
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
-            //app.UseAbp(options => { options.UseAbpRequestLocalization = false; }); // Initializes ABP framework.
+            app.UseAbp(options => { options.UseAbpRequestLocalization = false; }); // Initializes ABP framework.
 
             app.UseCors(_defaultCorsPolicyName); // Enable CORS!
 
@@ -106,7 +106,7 @@ namespace EdwardAbp.Web.Host.Startup
 
             app.UseAuthentication();
 
-            //app.UseAbpRequestLocalization();
+            app.UseAbpRequestLocalization();
 
 #if FEATURE_SIGNALR
             // Integrate with OWIN
@@ -134,8 +134,8 @@ namespace EdwardAbp.Web.Host.Startup
             // Enable middleware to serve swagger-ui assets (HTML, JS, CSS etc.)
             app.UseSwaggerUI(options =>
             {
-                options.InjectOnCompleteJavaScript("/swagger/ui/abp.js");
-                options.InjectOnCompleteJavaScript("/swagger/ui/on-complete.js");
+                //options.InjectOnCompleteJavaScript("/swagger/ui/abp.js");
+                //options.InjectOnCompleteJavaScript("/swagger/ui/on-complete.js");
                 options.SwaggerEndpoint("/swagger/v1/swagger.json", "EdwardAbp API V1");
             }); // URL: /swagger
         }

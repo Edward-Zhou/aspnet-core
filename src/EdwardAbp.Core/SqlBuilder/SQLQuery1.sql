@@ -46,3 +46,29 @@ Where Id in
 )
 And TenantId = 3028
 And IsDeleted = 0
+
+
+
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+ALTER PROCEDURE orderpro 
+	@tenantId int
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+    Select COUNT(Orders.Id) AS Total From Orders
+	Left Join OrderItems on Orders.Id = OrderItems.OrderId
+	Where Orders.TenantId = @tenantId
+	For Json AUTO
+	Select Orders.Id as [Id], OrderItems.Title as [Title] From Orders
+	Left Join OrderItems on Orders.Id = OrderItems.OrderId
+	Where Orders.TenantId = @tenantId
+	For Json AUTO
+END
+GO
+

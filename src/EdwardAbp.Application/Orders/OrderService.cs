@@ -18,6 +18,7 @@ namespace EdwardAbp.Orders
         private readonly ICustomRepository<Order, long> CustomRepository;
         private readonly IRepository<Order, long> _orderRepository;
         private readonly IRepository<Product, long> _productRepository;
+        public ICustomRepository<Order, long> OrderRepository { get; set; }
         public OrderService(IRepository<Order, long> orderRepository, IRepository<Product, long> productRepository, ICustomRepository<Order, long> CustomRepository)
         {
             _orderRepository = orderRepository;
@@ -26,6 +27,7 @@ namespace EdwardAbp.Orders
         }
         public async Task<List<OrderDto>> GetOrders()
         {
+            var result = OrderRepository.PagedResult("exec orderpro 0");
             int orderStatus = 2;
             int r = (int)EdwardExtension.ToValue<OrderStatus>("发货1");
             string status = ((OrderStatus)orderStatus).ToDisplayName();

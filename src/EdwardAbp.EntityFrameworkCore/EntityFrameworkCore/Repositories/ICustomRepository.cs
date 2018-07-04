@@ -76,6 +76,9 @@ namespace EdwardAbp.EntityFrameworkCore.Repositories
         {
             using (var result = base.QueryMultiple(sql, param, Transaction, commandTimeout, commandType))
             {
+                var a = result.Read().Single();
+                var b = result.Read();
+                var c = result.Read().ToList();
                 return new PagedResultDto<TEntity>(
                            result.Read<int>().Single(),
                            result.Read<TEntity>().ToList()

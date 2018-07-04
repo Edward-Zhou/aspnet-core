@@ -8,7 +8,7 @@ namespace EdwardAbp.SqlBuilder
     {
         static void Main(string[] args)
         {
-            var sb = new SqlBuilder(new StringBuilder());
+            //var sb = new SqlBuilder(new StringBuilder());
             //var sb = new StringBuilder();
             //sb.AppendLineIf("Hello World");
             //sb.AppendLineIf("");
@@ -17,7 +17,7 @@ namespace EdwardAbp.SqlBuilder
             //var test = "Test";
             //sb.AppendLine($" { ( 1==2 ? test : "{}" )} ");
 
-            Console.WriteLine(sb.ToString());
+            //Console.WriteLine(sb.ToString());
             Console.ReadLine();
         }
         public static StringBuilder FiltersBase(FilterModel filter)
