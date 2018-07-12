@@ -19,12 +19,26 @@ namespace EdwardAbp.Orders
         private readonly IRepository<Order, long> _orderRepository;
         private readonly IRepository<Product, long> _productRepository;
         public ICustomRepository<Order, long> OrderRepository { get; set; }
-        public OrderService(IRepository<Order, long> orderRepository, IRepository<Product, long> productRepository, ICustomRepository<Order, long> CustomRepository)
+        private readonly OrderManager _orderManager;
+        public OrderService(IRepository<Order, long> orderRepository, 
+            IRepository<Product, long> productRepository, 
+            ICustomRepository<Order, long> CustomRepository,
+            OrderManager orderManager)
         {
             _orderRepository = orderRepository;
             _productRepository = productRepository;
             this.CustomRepository = CustomRepository;
+            _orderManager = orderManager;
         }
+        public async Task<OrderDto> GetOrderById(long id)
+        {
+            using (CurrentUnitOfWork.SetTenantId(1))
+            {
+                var result = await _orderManager.OrderRepository.GetAsync(id);
+                return ObjectMapper.Map<OrderDto>(result);
+            }
+        }
+
         public async Task<List<OrderDto>> GetOrders()
         {
             var result = OrderRepository.PagedResult("exec orderpro 0");
