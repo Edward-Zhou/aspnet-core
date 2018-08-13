@@ -5,6 +5,7 @@ using EdwardAbp.EntityFrameworkCore.Repositories;
 using EdwardAbp.Extensions;
 using EdwardAbp.Orders.Dtos;
 using EFCore.BulkExtensions;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -48,7 +49,7 @@ namespace EdwardAbp.Orders
             var orders = await _orderRepository.GetAll().Include(o => o.OrderItems).ToListAsync();
             return ObjectMapper.Map<List<OrderDto>>(orders);
         }
-        public async Task<OrderDto> CreateOrder(OrderDto input)
+        public async Task<OrderDto> CreateOrder([FromForm]OrderDto input)
         {
             using (CurrentUnitOfWork.SetTenantId(1))
             {

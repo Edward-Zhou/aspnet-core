@@ -72,6 +72,8 @@ namespace EdwardAbp.Web.Host.Startup
             // Swagger - Enable this line and the related lines in Configure method to enable swagger UI
             services.AddSwaggerGen(options =>
             {
+                options.OperationFilter<FileOperationFilter>();
+
                 options.SwaggerDoc("v1", new Info { Title = "EdwardAbp API", Version = "v1" });
                 options.DocInclusionPredicate((docName, description) => true);
 
@@ -83,6 +85,7 @@ namespace EdwardAbp.Web.Host.Startup
                     In = "header",
                     Type = "apiKey"
                 });
+                options.DescribeAllEnumsAsStrings();
                 // Assign scope requirements to operations based on AuthorizeAttribute
                 options.OperationFilter<SecurityRequirementsOperationFilter>();
             });

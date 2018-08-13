@@ -26311,3 +26311,919 @@ Abp.Domain.Entities.EntityNotFoundException: There is no such an entity. Entity 
 INFO  2018-07-12 04:35:41,092 [11   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
 INFO  2018-07-12 04:35:41,130 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action EdwardAbp.Orders.OrderService.GetOrderById (EdwardAbp.Application) in 6761.7026ms
 INFO  2018-07-12 04:35:41,134 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 6849.0132ms 404 application/json; charset=utf-8
+DEBUG 2018-08-13 16:40:33,451 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-08-13 16:40:33,553 [1    ] Abp.Modules.AbpModuleManager             - Found 16 ABP modules in total.
+DEBUG 2018-08-13 16:40:33,601 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.Web.Host.Startup.EdwardAbpWebHostModule, EdwardAbp.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:40:33,604 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EdwardAbpWebCoreModule, EdwardAbp.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:40:33,605 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EdwardAbpApplicationModule, EdwardAbp.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:40:33,605 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EdwardAbpCoreModule, EdwardAbp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:40:33,605 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:40:33,606 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:40:33,606 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:40:33,607 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:40:33,608 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EntityFrameworkCore.EdwardAbpEntityFrameworkModule, EdwardAbp.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:40:33,608 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:40:33,608 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:40:33,608 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:40:33,609 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:40:33,609 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:40:33,609 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Runtime.Caching.Redis.AbpRedisCacheModule, Abp.RedisCache, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:40:33,609 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:40:33,613 [1    ] Abp.Modules.AbpModuleManager             - 16 modules loaded.
+DEBUG 2018-08-13 16:40:33,725 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 16:40:33,725 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 16:40:33,725 [1    ] o.Configuration.LanguageManagementConfig - Converted EdwardAbp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 16:40:33,725 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 16:40:34,345 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: EdwardAbp.EntityFrameworkCore.EdwardAbpDbContext, EdwardAbp.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:40:35,332 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-08-13 16:40:35,405 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-08-13 16:40:35,426 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-08-13 16:40:35,445 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EdwardAbp
+DEBUG 2018-08-13 16:40:35,457 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-08-13 16:40:35,584 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-08-13 16:40:35,628 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 12 classes define auto mapping attributes
+DEBUG 2018-08-13 16:40:35,628 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-08-13 16:40:35,632 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Users.Dto.CreateUserDto
+DEBUG 2018-08-13 16:40:35,632 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Users.Dto.UserDto
+DEBUG 2018-08-13 16:40:35,633 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-08-13 16:40:35,633 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-08-13 16:40:35,633 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Roles.Dto.CreateRoleDto
+DEBUG 2018-08-13 16:40:35,633 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Roles.Dto.PermissionDto
+DEBUG 2018-08-13 16:40:35,633 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Roles.Dto.RoleDto
+DEBUG 2018-08-13 16:40:35,633 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Orders.Dtos.OrderDto
+DEBUG 2018-08-13 16:40:35,633 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Orders.Dtos.OrderItemDto
+DEBUG 2018-08-13 16:40:35,633 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-08-13 16:40:35,633 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.MultiTenancy.Dto.TenantDto
+DEBUG 2018-08-13 16:40:58,637 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-08-13 16:40:58,658 [1    ] Abp.Modules.AbpModuleManager             - Found 16 ABP modules in total.
+DEBUG 2018-08-13 16:40:58,692 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.Web.Host.Startup.EdwardAbpWebHostModule, EdwardAbp.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:40:58,695 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EdwardAbpWebCoreModule, EdwardAbp.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:40:58,696 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EdwardAbpApplicationModule, EdwardAbp.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:40:58,696 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EdwardAbpCoreModule, EdwardAbp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:40:58,696 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:40:58,696 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:40:58,696 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:40:58,697 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:40:58,697 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EntityFrameworkCore.EdwardAbpEntityFrameworkModule, EdwardAbp.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:40:58,697 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:40:58,698 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:40:58,698 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:40:58,698 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:40:58,698 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:40:58,698 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Runtime.Caching.Redis.AbpRedisCacheModule, Abp.RedisCache, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:40:58,699 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:40:58,701 [1    ] Abp.Modules.AbpModuleManager             - 16 modules loaded.
+DEBUG 2018-08-13 16:40:58,783 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 16:40:58,783 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 16:40:58,783 [1    ] o.Configuration.LanguageManagementConfig - Converted EdwardAbp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 16:40:58,783 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 16:40:59,158 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: EdwardAbp.EntityFrameworkCore.EdwardAbpDbContext, EdwardAbp.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:40:59,620 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-08-13 16:40:59,641 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-08-13 16:40:59,666 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-08-13 16:40:59,671 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EdwardAbp
+DEBUG 2018-08-13 16:40:59,675 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-08-13 16:40:59,705 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-08-13 16:40:59,744 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 12 classes define auto mapping attributes
+DEBUG 2018-08-13 16:40:59,744 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-08-13 16:40:59,747 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Users.Dto.CreateUserDto
+DEBUG 2018-08-13 16:40:59,747 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Users.Dto.UserDto
+DEBUG 2018-08-13 16:40:59,747 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-08-13 16:40:59,747 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-08-13 16:40:59,747 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Roles.Dto.CreateRoleDto
+DEBUG 2018-08-13 16:40:59,747 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Roles.Dto.PermissionDto
+DEBUG 2018-08-13 16:40:59,747 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Roles.Dto.RoleDto
+DEBUG 2018-08-13 16:40:59,748 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Orders.Dtos.OrderDto
+DEBUG 2018-08-13 16:40:59,748 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Orders.Dtos.OrderItemDto
+DEBUG 2018-08-13 16:40:59,748 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-08-13 16:40:59,748 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.MultiTenancy.Dto.TenantDto
+DEBUG 2018-08-13 16:41:39,669 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-08-13 16:41:39,755 [1    ] Abp.Modules.AbpModuleManager             - Found 16 ABP modules in total.
+DEBUG 2018-08-13 16:41:39,805 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.Web.Host.Startup.EdwardAbpWebHostModule, EdwardAbp.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:41:39,808 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EdwardAbpWebCoreModule, EdwardAbp.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:41:39,809 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EdwardAbpApplicationModule, EdwardAbp.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:41:39,809 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EdwardAbpCoreModule, EdwardAbp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:41:39,809 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:41:39,809 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:41:39,810 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:41:39,810 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:41:39,810 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EntityFrameworkCore.EdwardAbpEntityFrameworkModule, EdwardAbp.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:41:39,811 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:41:39,811 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:41:39,811 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:41:39,811 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:41:39,812 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:41:39,812 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Runtime.Caching.Redis.AbpRedisCacheModule, Abp.RedisCache, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:41:39,812 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:41:39,815 [1    ] Abp.Modules.AbpModuleManager             - 16 modules loaded.
+DEBUG 2018-08-13 16:41:39,920 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 16:41:39,920 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 16:41:39,920 [1    ] o.Configuration.LanguageManagementConfig - Converted EdwardAbp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 16:41:39,920 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 16:41:40,487 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: EdwardAbp.EntityFrameworkCore.EdwardAbpDbContext, EdwardAbp.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:41:41,418 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-08-13 16:41:41,444 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-08-13 16:41:41,461 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-08-13 16:41:41,467 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EdwardAbp
+DEBUG 2018-08-13 16:41:41,473 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-08-13 16:41:41,588 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-08-13 16:41:41,631 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 12 classes define auto mapping attributes
+DEBUG 2018-08-13 16:41:41,631 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-08-13 16:41:41,634 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Users.Dto.CreateUserDto
+DEBUG 2018-08-13 16:41:41,635 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Users.Dto.UserDto
+DEBUG 2018-08-13 16:41:41,635 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-08-13 16:41:41,635 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-08-13 16:41:41,635 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Roles.Dto.CreateRoleDto
+DEBUG 2018-08-13 16:41:41,635 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Roles.Dto.PermissionDto
+DEBUG 2018-08-13 16:41:41,635 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Roles.Dto.RoleDto
+DEBUG 2018-08-13 16:41:41,635 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Orders.Dtos.OrderDto
+DEBUG 2018-08-13 16:41:41,635 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Orders.Dtos.OrderItemDto
+DEBUG 2018-08-13 16:41:41,635 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-08-13 16:41:41,635 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.MultiTenancy.Dto.TenantDto
+INFO  2018-08-13 16:41:47,749 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/  
+INFO  2018-08-13 16:41:47,749 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:21021/  0
+INFO  2018-08-13 16:41:47,861 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 195.1819ms 200 
+INFO  2018-08-13 16:41:49,938 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action EdwardAbp.Web.Host.Controllers.HomeController.Index (EdwardAbp.Web.Host)
+INFO  2018-08-13 16:41:50,668 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method EdwardAbp.Web.Host.Controllers.HomeController.Index (EdwardAbp.Web.Host) - Validation state: Valid
+INFO  2018-08-13 16:41:50,678 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method EdwardAbp.Web.Host.Controllers.HomeController.Index (EdwardAbp.Web.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 2.0612ms.
+INFO  2018-08-13 16:41:50,770 [7    ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2018-08-13 16:41:50,784 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action EdwardAbp.Web.Host.Controllers.HomeController.Index (EdwardAbp.Web.Host) in 838.2299ms
+INFO  2018-08-13 16:41:50,803 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger  
+INFO  2018-08-13 16:41:50,808 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3147.7949ms 302 
+INFO  2018-08-13 16:41:50,820 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 16.7776ms 301 
+INFO  2018-08-13 16:41:50,828 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2018-08-13 16:41:50,859 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 32.6606ms 200 text/html
+INFO  2018-08-13 16:41:50,884 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui.css  
+INFO  2018-08-13 16:41:50,885 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-bundle.js  
+INFO  2018-08-13 16:41:50,888 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-standalone-preset.js  
+INFO  2018-08-13 16:41:50,943 [7    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+INFO  2018-08-13 16:41:50,977 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 70.119ms 200 text/css
+INFO  2018-08-13 16:41:51,007 [11   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+INFO  2018-08-13 16:41:51,019 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 122.3633ms 200 application/javascript
+INFO  2018-08-13 16:41:51,095 [6    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+INFO  2018-08-13 16:41:51,100 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 218.5243ms 200 application/javascript
+INFO  2018-08-13 16:41:51,407 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2018-08-13 16:41:51,430 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/favicon-32x32.png  
+INFO  2018-08-13 16:41:51,435 [11   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+INFO  2018-08-13 16:41:51,439 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 7.4397ms 200 image/png
+INFO  2018-08-13 16:41:51,449 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/favicon-16x16.png  
+INFO  2018-08-13 16:41:51,454 [12   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+INFO  2018-08-13 16:41:51,458 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 8.435ms 200 image/png
+INFO  2018-08-13 16:41:51,716 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 305.3503ms 200 application/json;charset=utf-8
+DEBUG 2018-08-13 16:51:02,883 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-08-13 16:51:02,979 [1    ] Abp.Modules.AbpModuleManager             - Found 16 ABP modules in total.
+DEBUG 2018-08-13 16:51:03,025 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.Web.Host.Startup.EdwardAbpWebHostModule, EdwardAbp.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:51:03,028 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EdwardAbpWebCoreModule, EdwardAbp.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:51:03,029 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EdwardAbpApplicationModule, EdwardAbp.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:51:03,029 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EdwardAbpCoreModule, EdwardAbp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:51:03,030 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:51:03,030 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:51:03,030 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:51:03,032 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:51:03,032 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EntityFrameworkCore.EdwardAbpEntityFrameworkModule, EdwardAbp.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:51:03,033 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:51:03,033 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:51:03,033 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:51:03,034 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:51:03,034 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:51:03,034 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Runtime.Caching.Redis.AbpRedisCacheModule, Abp.RedisCache, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:51:03,034 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:51:03,038 [1    ] Abp.Modules.AbpModuleManager             - 16 modules loaded.
+DEBUG 2018-08-13 16:51:03,154 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 16:51:03,154 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 16:51:03,154 [1    ] o.Configuration.LanguageManagementConfig - Converted EdwardAbp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 16:51:03,154 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 16:51:03,736 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: EdwardAbp.EntityFrameworkCore.EdwardAbpDbContext, EdwardAbp.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:51:04,688 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-08-13 16:51:04,716 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-08-13 16:51:04,731 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-08-13 16:51:04,739 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EdwardAbp
+DEBUG 2018-08-13 16:51:04,784 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-08-13 16:51:04,903 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-08-13 16:51:04,950 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 12 classes define auto mapping attributes
+DEBUG 2018-08-13 16:51:04,950 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-08-13 16:51:04,954 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Users.Dto.CreateUserDto
+DEBUG 2018-08-13 16:51:04,955 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Users.Dto.UserDto
+DEBUG 2018-08-13 16:51:04,955 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-08-13 16:51:04,955 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-08-13 16:51:04,955 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Roles.Dto.CreateRoleDto
+DEBUG 2018-08-13 16:51:04,955 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Roles.Dto.PermissionDto
+DEBUG 2018-08-13 16:51:04,955 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Roles.Dto.RoleDto
+DEBUG 2018-08-13 16:51:04,955 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Orders.Dtos.OrderDto
+DEBUG 2018-08-13 16:51:04,955 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Orders.Dtos.OrderItemDto
+DEBUG 2018-08-13 16:51:04,955 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-08-13 16:51:04,955 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.MultiTenancy.Dto.TenantDto
+INFO  2018-08-13 16:51:09,701 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/  
+INFO  2018-08-13 16:51:09,701 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:21021/  0
+INFO  2018-08-13 16:51:09,801 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 165.7306ms 200 
+INFO  2018-08-13 16:51:12,221 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action EdwardAbp.Web.Host.Controllers.HomeController.Index (EdwardAbp.Web.Host)
+INFO  2018-08-13 16:51:13,008 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method EdwardAbp.Web.Host.Controllers.HomeController.Index (EdwardAbp.Web.Host) - Validation state: Valid
+INFO  2018-08-13 16:51:13,018 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method EdwardAbp.Web.Host.Controllers.HomeController.Index (EdwardAbp.Web.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 2.6873ms.
+INFO  2018-08-13 16:51:13,259 [6    ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2018-08-13 16:51:13,276 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action EdwardAbp.Web.Host.Controllers.HomeController.Index (EdwardAbp.Web.Host) in 1046.3863ms
+INFO  2018-08-13 16:51:13,319 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2018-08-13 16:51:13,321 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3672.6771ms 302 
+INFO  2018-08-13 16:51:13,360 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 61.3361ms 200 text/html
+INFO  2018-08-13 16:51:13,412 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui.css  
+INFO  2018-08-13 16:51:13,413 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-bundle.js  
+INFO  2018-08-13 16:51:13,416 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-standalone-preset.js  
+INFO  2018-08-13 16:51:13,483 [6    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-standalone-preset.js was not modified
+INFO  2018-08-13 16:51:13,484 [11   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-bundle.js was not modified
+INFO  2018-08-13 16:51:13,485 [7    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui.css was not modified
+INFO  2018-08-13 16:51:13,496 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 100.6545ms 304 text/css
+INFO  2018-08-13 16:51:13,538 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 74.9244ms 304 application/javascript
+INFO  2018-08-13 16:51:13,559 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 99.8784ms 304 application/javascript
+INFO  2018-08-13 16:51:13,892 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2018-08-13 16:51:14,155 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 259.4389ms 200 application/json;charset=utf-8
+DEBUG 2018-08-13 16:52:56,766 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-08-13 16:52:56,852 [1    ] Abp.Modules.AbpModuleManager             - Found 16 ABP modules in total.
+DEBUG 2018-08-13 16:52:56,900 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.Web.Host.Startup.EdwardAbpWebHostModule, EdwardAbp.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:52:56,903 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EdwardAbpWebCoreModule, EdwardAbp.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:52:56,903 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EdwardAbpApplicationModule, EdwardAbp.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:52:56,903 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EdwardAbpCoreModule, EdwardAbp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:52:56,903 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:52:56,904 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:52:56,904 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:52:56,904 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:52:56,905 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EntityFrameworkCore.EdwardAbpEntityFrameworkModule, EdwardAbp.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:52:56,905 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:52:56,905 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:52:56,905 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:52:56,905 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:52:56,906 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:52:56,906 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Runtime.Caching.Redis.AbpRedisCacheModule, Abp.RedisCache, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:52:56,906 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:52:56,909 [1    ] Abp.Modules.AbpModuleManager             - 16 modules loaded.
+DEBUG 2018-08-13 16:52:57,028 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 16:52:57,028 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 16:52:57,028 [1    ] o.Configuration.LanguageManagementConfig - Converted EdwardAbp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 16:52:57,028 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 16:52:57,615 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: EdwardAbp.EntityFrameworkCore.EdwardAbpDbContext, EdwardAbp.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:52:58,567 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-08-13 16:52:58,590 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-08-13 16:52:58,604 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-08-13 16:52:58,610 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EdwardAbp
+DEBUG 2018-08-13 16:52:58,635 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-08-13 16:52:58,751 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-08-13 16:52:58,794 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 12 classes define auto mapping attributes
+DEBUG 2018-08-13 16:52:58,794 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-08-13 16:52:58,797 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Users.Dto.CreateUserDto
+DEBUG 2018-08-13 16:52:58,797 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Users.Dto.UserDto
+DEBUG 2018-08-13 16:52:58,798 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-08-13 16:52:58,798 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-08-13 16:52:58,798 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Roles.Dto.CreateRoleDto
+DEBUG 2018-08-13 16:52:58,798 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Roles.Dto.PermissionDto
+DEBUG 2018-08-13 16:52:58,798 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Roles.Dto.RoleDto
+DEBUG 2018-08-13 16:52:58,798 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Orders.Dtos.OrderDto
+DEBUG 2018-08-13 16:52:58,798 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Orders.Dtos.OrderItemDto
+DEBUG 2018-08-13 16:52:58,798 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-08-13 16:52:58,798 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.MultiTenancy.Dto.TenantDto
+INFO  2018-08-13 16:53:03,315 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:21021/  0
+INFO  2018-08-13 16:53:03,315 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/  
+INFO  2018-08-13 16:53:03,400 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 148.5658ms 200 
+INFO  2018-08-13 16:53:05,663 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action EdwardAbp.Web.Host.Controllers.HomeController.Index (EdwardAbp.Web.Host)
+INFO  2018-08-13 16:53:06,333 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method EdwardAbp.Web.Host.Controllers.HomeController.Index (EdwardAbp.Web.Host) - Validation state: Valid
+INFO  2018-08-13 16:53:06,344 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method EdwardAbp.Web.Host.Controllers.HomeController.Index (EdwardAbp.Web.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 2.7785ms.
+INFO  2018-08-13 16:53:06,565 [7    ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2018-08-13 16:53:06,580 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action EdwardAbp.Web.Host.Controllers.HomeController.Index (EdwardAbp.Web.Host) in 909.0258ms
+INFO  2018-08-13 16:53:06,597 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3351.4857ms 302 
+INFO  2018-08-13 16:53:06,601 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2018-08-13 16:53:06,637 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 37.5393ms 200 text/html
+INFO  2018-08-13 16:53:06,701 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui.css  
+INFO  2018-08-13 16:53:06,745 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-bundle.js  
+INFO  2018-08-13 16:53:06,746 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-standalone-preset.js  
+INFO  2018-08-13 16:53:06,813 [11   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-bundle.js was not modified
+INFO  2018-08-13 16:53:06,814 [12   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-standalone-preset.js was not modified
+INFO  2018-08-13 16:53:06,817 [7    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui.css was not modified
+INFO  2018-08-13 16:53:06,828 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 167.2625ms 304 text/css
+INFO  2018-08-13 16:53:06,851 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 139.0979ms 304 application/javascript
+INFO  2018-08-13 16:53:06,873 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 139.4123ms 304 application/javascript
+INFO  2018-08-13 16:53:06,995 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2018-08-13 16:53:07,239 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 241.617ms 200 application/json;charset=utf-8
+DEBUG 2018-08-13 16:58:15,697 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-08-13 16:58:15,796 [1    ] Abp.Modules.AbpModuleManager             - Found 16 ABP modules in total.
+DEBUG 2018-08-13 16:58:15,846 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.Web.Host.Startup.EdwardAbpWebHostModule, EdwardAbp.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:58:15,849 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EdwardAbpWebCoreModule, EdwardAbp.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:58:15,850 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EdwardAbpApplicationModule, EdwardAbp.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:58:15,850 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EdwardAbpCoreModule, EdwardAbp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:58:15,850 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:58:15,850 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:58:15,850 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:58:15,851 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:58:15,851 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EntityFrameworkCore.EdwardAbpEntityFrameworkModule, EdwardAbp.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:58:15,852 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:58:15,852 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:58:15,852 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:58:15,852 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:58:15,852 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:58:15,853 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Runtime.Caching.Redis.AbpRedisCacheModule, Abp.RedisCache, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:58:15,853 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:58:15,856 [1    ] Abp.Modules.AbpModuleManager             - 16 modules loaded.
+DEBUG 2018-08-13 16:58:15,958 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 16:58:15,958 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 16:58:15,958 [1    ] o.Configuration.LanguageManagementConfig - Converted EdwardAbp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 16:58:15,958 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 16:58:16,528 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: EdwardAbp.EntityFrameworkCore.EdwardAbpDbContext, EdwardAbp.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 16:58:17,364 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-08-13 16:58:17,389 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-08-13 16:58:17,402 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-08-13 16:58:17,408 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EdwardAbp
+DEBUG 2018-08-13 16:58:17,415 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-08-13 16:58:17,529 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-08-13 16:58:17,573 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 12 classes define auto mapping attributes
+DEBUG 2018-08-13 16:58:17,573 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-08-13 16:58:17,576 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Users.Dto.CreateUserDto
+DEBUG 2018-08-13 16:58:17,576 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Users.Dto.UserDto
+DEBUG 2018-08-13 16:58:17,576 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-08-13 16:58:17,576 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-08-13 16:58:17,576 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Roles.Dto.CreateRoleDto
+DEBUG 2018-08-13 16:58:17,576 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Roles.Dto.PermissionDto
+DEBUG 2018-08-13 16:58:17,576 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Roles.Dto.RoleDto
+DEBUG 2018-08-13 16:58:17,577 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Orders.Dtos.OrderDto
+DEBUG 2018-08-13 16:58:17,577 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Orders.Dtos.OrderItemDto
+DEBUG 2018-08-13 16:58:17,577 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-08-13 16:58:17,577 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.MultiTenancy.Dto.TenantDto
+INFO  2018-08-13 16:58:21,888 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:21021/  0
+INFO  2018-08-13 16:58:21,888 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/  
+INFO  2018-08-13 16:58:21,973 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 150.1034ms 200 
+INFO  2018-08-13 16:58:24,005 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action EdwardAbp.Web.Host.Controllers.HomeController.Index (EdwardAbp.Web.Host)
+INFO  2018-08-13 16:58:24,603 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method EdwardAbp.Web.Host.Controllers.HomeController.Index (EdwardAbp.Web.Host) - Validation state: Valid
+INFO  2018-08-13 16:58:24,612 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method EdwardAbp.Web.Host.Controllers.HomeController.Index (EdwardAbp.Web.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 2.0088ms.
+INFO  2018-08-13 16:58:24,821 [7    ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2018-08-13 16:58:24,840 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action EdwardAbp.Web.Host.Controllers.HomeController.Index (EdwardAbp.Web.Host) in 826.6588ms
+INFO  2018-08-13 16:58:24,859 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3039.3049ms 302 
+INFO  2018-08-13 16:58:24,882 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2018-08-13 16:58:24,918 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 56.5581ms 200 text/html
+INFO  2018-08-13 16:58:24,965 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui.css  
+INFO  2018-08-13 16:58:24,987 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-bundle.js  
+INFO  2018-08-13 16:58:24,989 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-standalone-preset.js  
+INFO  2018-08-13 16:58:25,051 [6    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-bundle.js was not modified
+INFO  2018-08-13 16:58:25,053 [7    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-standalone-preset.js was not modified
+INFO  2018-08-13 16:58:25,054 [11   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui.css was not modified
+INFO  2018-08-13 16:58:25,068 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 126.5243ms 304 text/css
+INFO  2018-08-13 16:58:25,091 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 91.2145ms 304 application/javascript
+INFO  2018-08-13 16:58:25,113 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 120.7305ms 304 application/javascript
+INFO  2018-08-13 16:58:25,221 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2018-08-13 16:58:25,461 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 238.6773ms 200 application/json;charset=utf-8
+DEBUG 2018-08-13 17:11:06,853 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-08-13 17:11:06,954 [1    ] Abp.Modules.AbpModuleManager             - Found 16 ABP modules in total.
+DEBUG 2018-08-13 17:11:06,998 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.Web.Host.Startup.EdwardAbpWebHostModule, EdwardAbp.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:11:07,001 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EdwardAbpWebCoreModule, EdwardAbp.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:11:07,001 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EdwardAbpApplicationModule, EdwardAbp.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:11:07,002 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EdwardAbpCoreModule, EdwardAbp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:11:07,002 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:11:07,002 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:11:07,002 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:11:07,003 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:11:07,004 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EntityFrameworkCore.EdwardAbpEntityFrameworkModule, EdwardAbp.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:11:07,005 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:11:07,006 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:11:07,006 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:11:07,007 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:11:07,007 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:11:07,007 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Runtime.Caching.Redis.AbpRedisCacheModule, Abp.RedisCache, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:11:07,007 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:11:07,011 [1    ] Abp.Modules.AbpModuleManager             - 16 modules loaded.
+DEBUG 2018-08-13 17:11:07,131 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 17:11:07,131 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 17:11:07,131 [1    ] o.Configuration.LanguageManagementConfig - Converted EdwardAbp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 17:11:07,131 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 17:11:07,759 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: EdwardAbp.EntityFrameworkCore.EdwardAbpDbContext, EdwardAbp.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:11:08,708 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-08-13 17:11:08,735 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-08-13 17:11:08,749 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-08-13 17:11:08,777 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EdwardAbp
+DEBUG 2018-08-13 17:11:08,783 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-08-13 17:11:08,948 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-08-13 17:11:09,020 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 12 classes define auto mapping attributes
+DEBUG 2018-08-13 17:11:09,020 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-08-13 17:11:09,024 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Users.Dto.CreateUserDto
+DEBUG 2018-08-13 17:11:09,024 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Users.Dto.UserDto
+DEBUG 2018-08-13 17:11:09,024 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-08-13 17:11:09,024 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-08-13 17:11:09,024 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Roles.Dto.CreateRoleDto
+DEBUG 2018-08-13 17:11:09,025 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Roles.Dto.PermissionDto
+DEBUG 2018-08-13 17:11:09,025 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Roles.Dto.RoleDto
+DEBUG 2018-08-13 17:11:09,025 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Orders.Dtos.OrderDto
+DEBUG 2018-08-13 17:11:09,025 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Orders.Dtos.OrderItemDto
+DEBUG 2018-08-13 17:11:09,025 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-08-13 17:11:09,025 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.MultiTenancy.Dto.TenantDto
+INFO  2018-08-13 17:11:13,978 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:21021/  0
+INFO  2018-08-13 17:11:13,978 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/  
+INFO  2018-08-13 17:11:14,087 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 174.8362ms 200 
+INFO  2018-08-13 17:11:16,450 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action EdwardAbp.Web.Host.Controllers.HomeController.Index (EdwardAbp.Web.Host)
+INFO  2018-08-13 17:11:17,158 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method EdwardAbp.Web.Host.Controllers.HomeController.Index (EdwardAbp.Web.Host) - Validation state: Valid
+INFO  2018-08-13 17:11:17,167 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method EdwardAbp.Web.Host.Controllers.HomeController.Index (EdwardAbp.Web.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 2.7406ms.
+INFO  2018-08-13 17:11:17,396 [13   ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2018-08-13 17:11:17,414 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action EdwardAbp.Web.Host.Controllers.HomeController.Index (EdwardAbp.Web.Host) in 955.6159ms
+INFO  2018-08-13 17:11:17,454 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3529.4595ms 302 
+INFO  2018-08-13 17:11:17,478 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2018-08-13 17:11:17,516 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 80.2121ms 200 text/html
+INFO  2018-08-13 17:11:17,557 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui.css  
+INFO  2018-08-13 17:11:17,559 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-bundle.js  
+INFO  2018-08-13 17:11:17,561 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-standalone-preset.js  
+INFO  2018-08-13 17:11:17,646 [7    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-standalone-preset.js was not modified
+INFO  2018-08-13 17:11:17,667 [6    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-bundle.js was not modified
+INFO  2018-08-13 17:11:17,668 [11   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui.css was not modified
+INFO  2018-08-13 17:11:17,708 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 112.9675ms 304 application/javascript
+INFO  2018-08-13 17:11:17,709 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 140.7706ms 304 text/css
+INFO  2018-08-13 17:11:17,735 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 137.7151ms 304 application/javascript
+INFO  2018-08-13 17:11:17,859 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2018-08-13 17:11:18,114 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 254.2778ms 200 application/json;charset=utf-8
+DEBUG 2018-08-13 17:14:55,510 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-08-13 17:14:55,590 [1    ] Abp.Modules.AbpModuleManager             - Found 16 ABP modules in total.
+DEBUG 2018-08-13 17:14:55,630 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.Web.Host.Startup.EdwardAbpWebHostModule, EdwardAbp.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:14:55,634 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EdwardAbpWebCoreModule, EdwardAbp.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:14:55,634 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EdwardAbpApplicationModule, EdwardAbp.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:14:55,634 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EdwardAbpCoreModule, EdwardAbp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:14:55,635 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:14:55,635 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:14:55,635 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:14:55,636 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:14:55,636 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EntityFrameworkCore.EdwardAbpEntityFrameworkModule, EdwardAbp.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:14:55,636 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:14:55,636 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:14:55,637 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:14:55,637 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:14:55,637 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:14:55,637 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Runtime.Caching.Redis.AbpRedisCacheModule, Abp.RedisCache, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:14:55,638 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:14:55,641 [1    ] Abp.Modules.AbpModuleManager             - 16 modules loaded.
+DEBUG 2018-08-13 17:14:55,741 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 17:14:55,741 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 17:14:55,741 [1    ] o.Configuration.LanguageManagementConfig - Converted EdwardAbp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 17:14:55,741 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 17:14:56,298 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: EdwardAbp.EntityFrameworkCore.EdwardAbpDbContext, EdwardAbp.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:14:57,146 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-08-13 17:14:57,171 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-08-13 17:14:57,186 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-08-13 17:14:57,191 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EdwardAbp
+DEBUG 2018-08-13 17:14:57,218 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-08-13 17:14:57,327 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-08-13 17:14:57,369 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 12 classes define auto mapping attributes
+DEBUG 2018-08-13 17:14:57,370 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-08-13 17:14:57,373 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Users.Dto.CreateUserDto
+DEBUG 2018-08-13 17:14:57,373 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Users.Dto.UserDto
+DEBUG 2018-08-13 17:14:57,373 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-08-13 17:14:57,373 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-08-13 17:14:57,373 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Roles.Dto.CreateRoleDto
+DEBUG 2018-08-13 17:14:57,373 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Roles.Dto.PermissionDto
+DEBUG 2018-08-13 17:14:57,373 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Roles.Dto.RoleDto
+DEBUG 2018-08-13 17:14:57,374 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Orders.Dtos.OrderDto
+DEBUG 2018-08-13 17:14:57,374 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Orders.Dtos.OrderItemDto
+DEBUG 2018-08-13 17:14:57,374 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-08-13 17:14:57,374 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.MultiTenancy.Dto.TenantDto
+INFO  2018-08-13 17:15:01,661 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/  
+INFO  2018-08-13 17:15:01,661 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:21021/  0
+INFO  2018-08-13 17:15:01,746 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 146.9781ms 200 
+INFO  2018-08-13 17:15:04,058 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action EdwardAbp.Web.Host.Controllers.HomeController.Index (EdwardAbp.Web.Host)
+INFO  2018-08-13 17:15:04,736 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method EdwardAbp.Web.Host.Controllers.HomeController.Index (EdwardAbp.Web.Host) - Validation state: Valid
+INFO  2018-08-13 17:15:04,747 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method EdwardAbp.Web.Host.Controllers.HomeController.Index (EdwardAbp.Web.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 2.3857ms.
+INFO  2018-08-13 17:15:04,974 [7    ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2018-08-13 17:15:04,990 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action EdwardAbp.Web.Host.Controllers.HomeController.Index (EdwardAbp.Web.Host) in 923.1055ms
+INFO  2018-08-13 17:15:05,030 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2018-08-13 17:15:05,051 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3416.691ms 302 
+INFO  2018-08-13 17:15:05,096 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 86.8393ms 200 text/html
+INFO  2018-08-13 17:15:05,123 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui.css  
+INFO  2018-08-13 17:15:05,126 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-bundle.js  
+INFO  2018-08-13 17:15:05,127 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-standalone-preset.js  
+INFO  2018-08-13 17:15:05,216 [7    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui.css was not modified
+INFO  2018-08-13 17:15:05,217 [6    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-standalone-preset.js was not modified
+INFO  2018-08-13 17:15:05,218 [13   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-bundle.js was not modified
+INFO  2018-08-13 17:15:05,229 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 98.5693ms 304 application/javascript
+INFO  2018-08-13 17:15:05,255 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 102.1883ms 304 text/css
+INFO  2018-08-13 17:15:05,256 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 99.144ms 304 application/javascript
+INFO  2018-08-13 17:15:05,404 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2018-08-13 17:15:05,649 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 243.5756ms 200 application/json;charset=utf-8
+DEBUG 2018-08-13 17:16:37,492 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-08-13 17:16:37,571 [1    ] Abp.Modules.AbpModuleManager             - Found 16 ABP modules in total.
+DEBUG 2018-08-13 17:16:37,616 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.Web.Host.Startup.EdwardAbpWebHostModule, EdwardAbp.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:16:37,620 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EdwardAbpWebCoreModule, EdwardAbp.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:16:37,620 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EdwardAbpApplicationModule, EdwardAbp.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:16:37,620 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EdwardAbpCoreModule, EdwardAbp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:16:37,621 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:16:37,621 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:16:37,621 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:16:37,622 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:16:37,622 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EntityFrameworkCore.EdwardAbpEntityFrameworkModule, EdwardAbp.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:16:37,622 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:16:37,622 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:16:37,623 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:16:37,623 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:16:37,623 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:16:37,623 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Runtime.Caching.Redis.AbpRedisCacheModule, Abp.RedisCache, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:16:37,624 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:16:37,627 [1    ] Abp.Modules.AbpModuleManager             - 16 modules loaded.
+DEBUG 2018-08-13 17:16:37,745 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 17:16:37,745 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 17:16:37,745 [1    ] o.Configuration.LanguageManagementConfig - Converted EdwardAbp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 17:16:37,745 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 17:16:38,330 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: EdwardAbp.EntityFrameworkCore.EdwardAbpDbContext, EdwardAbp.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:16:39,271 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-08-13 17:16:39,298 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-08-13 17:16:39,313 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-08-13 17:16:39,319 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EdwardAbp
+DEBUG 2018-08-13 17:16:39,324 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-08-13 17:16:39,447 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-08-13 17:16:39,494 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 12 classes define auto mapping attributes
+DEBUG 2018-08-13 17:16:39,494 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-08-13 17:16:39,497 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Users.Dto.CreateUserDto
+DEBUG 2018-08-13 17:16:39,498 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Users.Dto.UserDto
+DEBUG 2018-08-13 17:16:39,498 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-08-13 17:16:39,498 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-08-13 17:16:39,498 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Roles.Dto.CreateRoleDto
+DEBUG 2018-08-13 17:16:39,498 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Roles.Dto.PermissionDto
+DEBUG 2018-08-13 17:16:39,498 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Roles.Dto.RoleDto
+DEBUG 2018-08-13 17:16:39,498 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Orders.Dtos.OrderDto
+DEBUG 2018-08-13 17:16:39,498 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Orders.Dtos.OrderItemDto
+DEBUG 2018-08-13 17:16:39,499 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-08-13 17:16:39,499 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.MultiTenancy.Dto.TenantDto
+INFO  2018-08-13 17:16:44,208 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:21021/  0
+INFO  2018-08-13 17:16:44,208 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/  
+INFO  2018-08-13 17:16:44,296 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 150.3106ms 200 
+INFO  2018-08-13 17:16:46,615 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action EdwardAbp.Web.Host.Controllers.HomeController.Index (EdwardAbp.Web.Host)
+INFO  2018-08-13 17:16:47,365 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method EdwardAbp.Web.Host.Controllers.HomeController.Index (EdwardAbp.Web.Host) - Validation state: Valid
+INFO  2018-08-13 17:16:47,376 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method EdwardAbp.Web.Host.Controllers.HomeController.Index (EdwardAbp.Web.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 3.4745ms.
+INFO  2018-08-13 17:16:47,606 [7    ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2018-08-13 17:16:47,625 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action EdwardAbp.Web.Host.Controllers.HomeController.Index (EdwardAbp.Web.Host) in 1001.3707ms
+INFO  2018-08-13 17:16:47,645 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2018-08-13 17:16:47,648 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3506.9978ms 302 
+INFO  2018-08-13 17:16:47,690 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 45.0346ms 200 text/html
+INFO  2018-08-13 17:16:47,731 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui.css  
+INFO  2018-08-13 17:16:47,753 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-bundle.js  
+INFO  2018-08-13 17:16:47,755 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-standalone-preset.js  
+INFO  2018-08-13 17:16:47,819 [12   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui.css was not modified
+INFO  2018-08-13 17:16:47,822 [7    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-standalone-preset.js was not modified
+INFO  2018-08-13 17:16:47,823 [6    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-bundle.js was not modified
+INFO  2018-08-13 17:16:47,855 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 122.4873ms 304 text/css
+INFO  2018-08-13 17:16:47,856 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 120.446ms 304 application/javascript
+INFO  2018-08-13 17:16:47,880 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 96.6346ms 304 application/javascript
+INFO  2018-08-13 17:16:48,000 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2018-08-13 17:16:48,266 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 262.1004ms 200 application/json;charset=utf-8
+INFO  2018-08-13 17:19:28,727 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2018-08-13 17:19:28,733 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 5.7197ms 200 text/html
+INFO  2018-08-13 17:19:28,768 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui.css  
+INFO  2018-08-13 17:19:28,770 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-standalone-preset.js  
+INFO  2018-08-13 17:19:28,798 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-bundle.js  
+INFO  2018-08-13 17:19:28,842 [12   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-standalone-preset.js was not modified
+INFO  2018-08-13 17:19:28,866 [7    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui.css was not modified
+INFO  2018-08-13 17:19:28,913 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 85.0329ms 304 application/javascript
+INFO  2018-08-13 17:19:28,915 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 111.2708ms 304 text/css
+INFO  2018-08-13 17:19:28,923 [6    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-bundle.js was not modified
+INFO  2018-08-13 17:19:28,926 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 147.4955ms 304 application/javascript
+INFO  2018-08-13 17:19:29,064 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+DEBUG 2018-08-13 17:24:55,735 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-08-13 17:24:55,845 [1    ] Abp.Modules.AbpModuleManager             - Found 16 ABP modules in total.
+DEBUG 2018-08-13 17:24:55,892 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.Web.Host.Startup.EdwardAbpWebHostModule, EdwardAbp.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:24:55,895 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EdwardAbpWebCoreModule, EdwardAbp.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:24:55,895 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EdwardAbpApplicationModule, EdwardAbp.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:24:55,895 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EdwardAbpCoreModule, EdwardAbp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:24:55,896 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:24:55,896 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:24:55,896 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:24:55,897 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:24:55,897 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EntityFrameworkCore.EdwardAbpEntityFrameworkModule, EdwardAbp.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:24:55,897 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:24:55,897 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:24:55,898 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:24:55,898 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:24:55,898 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:24:55,898 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Runtime.Caching.Redis.AbpRedisCacheModule, Abp.RedisCache, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:24:55,899 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:24:55,902 [1    ] Abp.Modules.AbpModuleManager             - 16 modules loaded.
+DEBUG 2018-08-13 17:24:56,017 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 17:24:56,017 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 17:24:56,017 [1    ] o.Configuration.LanguageManagementConfig - Converted EdwardAbp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 17:24:56,017 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 17:24:56,601 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: EdwardAbp.EntityFrameworkCore.EdwardAbpDbContext, EdwardAbp.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:24:57,619 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-08-13 17:24:57,648 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-08-13 17:24:57,662 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-08-13 17:24:57,668 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EdwardAbp
+DEBUG 2018-08-13 17:24:57,675 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-08-13 17:24:57,805 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-08-13 17:24:57,850 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 12 classes define auto mapping attributes
+DEBUG 2018-08-13 17:24:57,850 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-08-13 17:24:57,853 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Users.Dto.CreateUserDto
+DEBUG 2018-08-13 17:24:57,853 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Users.Dto.UserDto
+DEBUG 2018-08-13 17:24:57,854 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-08-13 17:24:57,854 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-08-13 17:24:57,854 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Roles.Dto.CreateRoleDto
+DEBUG 2018-08-13 17:24:57,854 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Roles.Dto.PermissionDto
+DEBUG 2018-08-13 17:24:57,854 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Roles.Dto.RoleDto
+DEBUG 2018-08-13 17:24:57,854 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Orders.Dtos.OrderDto
+DEBUG 2018-08-13 17:24:57,854 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Orders.Dtos.OrderItemDto
+DEBUG 2018-08-13 17:24:57,854 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-08-13 17:24:57,854 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.MultiTenancy.Dto.TenantDto
+INFO  2018-08-13 17:25:02,429 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/  
+INFO  2018-08-13 17:25:02,429 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:21021/  0
+INFO  2018-08-13 17:25:02,514 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 146.6762ms 200 
+INFO  2018-08-13 17:25:04,589 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action EdwardAbp.Web.Host.Controllers.HomeController.Index (EdwardAbp.Web.Host)
+INFO  2018-08-13 17:25:05,214 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method EdwardAbp.Web.Host.Controllers.HomeController.Index (EdwardAbp.Web.Host) - Validation state: Valid
+INFO  2018-08-13 17:25:05,223 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method EdwardAbp.Web.Host.Controllers.HomeController.Index (EdwardAbp.Web.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 2.0005ms.
+INFO  2018-08-13 17:25:05,441 [7    ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2018-08-13 17:25:05,457 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action EdwardAbp.Web.Host.Controllers.HomeController.Index (EdwardAbp.Web.Host) in 860.6765ms
+INFO  2018-08-13 17:25:05,475 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3112.3149ms 302 
+INFO  2018-08-13 17:25:05,499 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2018-08-13 17:25:05,535 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 57.406ms 200 text/html
+INFO  2018-08-13 17:25:05,563 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui.css  
+INFO  2018-08-13 17:25:05,566 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-bundle.js  
+INFO  2018-08-13 17:25:05,570 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-standalone-preset.js  
+INFO  2018-08-13 17:25:05,616 [6    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-bundle.js was not modified
+INFO  2018-08-13 17:25:05,617 [7    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-standalone-preset.js was not modified
+INFO  2018-08-13 17:25:05,619 [11   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui.css was not modified
+INFO  2018-08-13 17:25:05,666 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 58.2126ms 304 application/javascript
+INFO  2018-08-13 17:25:05,688 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 68.887ms 304 text/css
+INFO  2018-08-13 17:25:05,692 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 55.2064ms 304 application/javascript
+INFO  2018-08-13 17:25:05,782 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+DEBUG 2018-08-13 17:25:51,219 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-08-13 17:25:51,307 [1    ] Abp.Modules.AbpModuleManager             - Found 16 ABP modules in total.
+DEBUG 2018-08-13 17:25:51,357 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.Web.Host.Startup.EdwardAbpWebHostModule, EdwardAbp.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:25:51,360 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EdwardAbpWebCoreModule, EdwardAbp.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:25:51,360 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EdwardAbpApplicationModule, EdwardAbp.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:25:51,361 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EdwardAbpCoreModule, EdwardAbp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:25:51,361 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:25:51,361 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:25:51,361 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:25:51,362 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:25:51,362 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EntityFrameworkCore.EdwardAbpEntityFrameworkModule, EdwardAbp.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:25:51,362 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:25:51,363 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:25:51,363 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:25:51,363 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:25:51,363 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:25:51,363 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Runtime.Caching.Redis.AbpRedisCacheModule, Abp.RedisCache, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:25:51,364 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:25:51,367 [1    ] Abp.Modules.AbpModuleManager             - 16 modules loaded.
+DEBUG 2018-08-13 17:25:51,478 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 17:25:51,478 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 17:25:51,478 [1    ] o.Configuration.LanguageManagementConfig - Converted EdwardAbp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 17:25:51,478 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 17:25:52,067 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: EdwardAbp.EntityFrameworkCore.EdwardAbpDbContext, EdwardAbp.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:25:53,014 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-08-13 17:25:53,043 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-08-13 17:25:53,080 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-08-13 17:25:53,087 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EdwardAbp
+DEBUG 2018-08-13 17:25:53,093 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-08-13 17:25:53,217 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-08-13 17:25:53,263 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 12 classes define auto mapping attributes
+DEBUG 2018-08-13 17:25:53,264 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-08-13 17:25:53,267 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Users.Dto.CreateUserDto
+DEBUG 2018-08-13 17:25:53,268 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Users.Dto.UserDto
+DEBUG 2018-08-13 17:25:53,268 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-08-13 17:25:53,268 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-08-13 17:25:53,268 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Roles.Dto.CreateRoleDto
+DEBUG 2018-08-13 17:25:53,268 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Roles.Dto.PermissionDto
+DEBUG 2018-08-13 17:25:53,268 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Roles.Dto.RoleDto
+DEBUG 2018-08-13 17:25:53,269 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Orders.Dtos.OrderDto
+DEBUG 2018-08-13 17:25:53,269 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Orders.Dtos.OrderItemDto
+DEBUG 2018-08-13 17:25:53,269 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-08-13 17:25:53,269 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.MultiTenancy.Dto.TenantDto
+INFO  2018-08-13 17:25:57,743 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:21021/  0
+INFO  2018-08-13 17:25:57,743 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/  
+INFO  2018-08-13 17:25:57,839 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 158.9609ms 200 
+INFO  2018-08-13 17:26:00,138 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action EdwardAbp.Web.Host.Controllers.HomeController.Index (EdwardAbp.Web.Host)
+INFO  2018-08-13 17:26:00,817 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method EdwardAbp.Web.Host.Controllers.HomeController.Index (EdwardAbp.Web.Host) - Validation state: Valid
+INFO  2018-08-13 17:26:00,826 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method EdwardAbp.Web.Host.Controllers.HomeController.Index (EdwardAbp.Web.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 2.4085ms.
+INFO  2018-08-13 17:26:01,045 [6    ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2018-08-13 17:26:01,060 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action EdwardAbp.Web.Host.Controllers.HomeController.Index (EdwardAbp.Web.Host) in 913.0981ms
+INFO  2018-08-13 17:26:01,100 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2018-08-13 17:26:01,121 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3404.4795ms 302 
+INFO  2018-08-13 17:26:01,162 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 82.682ms 200 text/html
+INFO  2018-08-13 17:26:01,227 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-bundle.js  
+INFO  2018-08-13 17:26:01,229 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-standalone-preset.js  
+INFO  2018-08-13 17:26:01,230 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui.css  
+INFO  2018-08-13 17:26:01,296 [13   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui.css was not modified
+INFO  2018-08-13 17:26:01,299 [6    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-standalone-preset.js was not modified
+INFO  2018-08-13 17:26:01,300 [11   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-bundle.js was not modified
+INFO  2018-08-13 17:26:01,317 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 95.8648ms 304 application/javascript
+INFO  2018-08-13 17:26:01,337 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 117.9334ms 304 application/javascript
+INFO  2018-08-13 17:26:01,338 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 117.9268ms 304 text/css
+INFO  2018-08-13 17:26:01,473 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2018-08-13 17:26:35,834 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 34359.3645ms 200 application/json;charset=utf-8
+INFO  2018-08-13 17:27:09,240 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21021/api/services/app/OrderService/CreateOrder application/form-data 261
+INFO  2018-08-13 17:27:09,281 [12   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-08-13 17:27:09,284 [12   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2018-08-13 17:27:09,334 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "CreateOrder", controller = "OrderService"}. Executing action EdwardAbp.Orders.OrderService.CreateOrder (EdwardAbp.Application)
+INFO  2018-08-13 17:27:09,336 [12   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-08-13 17:27:09,338 [12   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2018-08-13 17:27:09,898 [12   ] icrosoft.AspNetCore.Mvc.StatusCodeResult - Executing HttpStatusCodeResult, setting HTTP status code 415
+INFO  2018-08-13 17:27:09,900 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action EdwardAbp.Orders.OrderService.CreateOrder (EdwardAbp.Application) in 564.7545ms
+INFO  2018-08-13 17:27:09,903 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 663.9185ms 415 
+INFO  2018-08-13 17:27:09,938 [12   ] Microsoft.AspNetCore.Server.Kestrel      - Connection id "0HLG0VR3BCSUI", Request id "0HLG0VR3BCSUI:00000005": the application completed without reading the entire request body.
+DEBUG 2018-08-13 17:28:22,755 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-08-13 17:28:22,847 [1    ] Abp.Modules.AbpModuleManager             - Found 16 ABP modules in total.
+DEBUG 2018-08-13 17:28:22,890 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.Web.Host.Startup.EdwardAbpWebHostModule, EdwardAbp.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:28:22,893 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EdwardAbpWebCoreModule, EdwardAbp.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:28:22,893 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EdwardAbpApplicationModule, EdwardAbp.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:28:22,893 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EdwardAbpCoreModule, EdwardAbp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:28:22,894 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:28:22,894 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:28:22,894 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:28:22,895 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:28:22,895 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EntityFrameworkCore.EdwardAbpEntityFrameworkModule, EdwardAbp.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:28:22,896 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:28:22,896 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:28:22,897 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:28:22,897 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:28:22,897 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:28:22,898 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Runtime.Caching.Redis.AbpRedisCacheModule, Abp.RedisCache, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:28:22,898 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:28:22,901 [1    ] Abp.Modules.AbpModuleManager             - 16 modules loaded.
+DEBUG 2018-08-13 17:28:23,000 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 17:28:23,000 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 17:28:23,000 [1    ] o.Configuration.LanguageManagementConfig - Converted EdwardAbp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 17:28:23,001 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 17:28:23,569 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: EdwardAbp.EntityFrameworkCore.EdwardAbpDbContext, EdwardAbp.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:28:24,464 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-08-13 17:28:24,492 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-08-13 17:28:24,506 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-08-13 17:28:24,512 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EdwardAbp
+DEBUG 2018-08-13 17:28:24,518 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-08-13 17:28:24,639 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-08-13 17:28:24,684 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 12 classes define auto mapping attributes
+DEBUG 2018-08-13 17:28:24,684 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-08-13 17:28:24,687 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Users.Dto.CreateUserDto
+DEBUG 2018-08-13 17:28:24,688 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Users.Dto.UserDto
+DEBUG 2018-08-13 17:28:24,688 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-08-13 17:28:24,688 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-08-13 17:28:24,688 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Roles.Dto.CreateRoleDto
+DEBUG 2018-08-13 17:28:24,688 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Roles.Dto.PermissionDto
+DEBUG 2018-08-13 17:28:24,688 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Roles.Dto.RoleDto
+DEBUG 2018-08-13 17:28:24,689 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Orders.Dtos.OrderDto
+DEBUG 2018-08-13 17:28:24,689 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Orders.Dtos.OrderItemDto
+DEBUG 2018-08-13 17:28:24,689 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-08-13 17:28:24,689 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.MultiTenancy.Dto.TenantDto
+INFO  2018-08-13 17:28:29,487 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:21021/  0
+INFO  2018-08-13 17:28:29,487 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/  
+INFO  2018-08-13 17:28:29,579 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 158.9985ms 200 
+INFO  2018-08-13 17:28:31,939 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action EdwardAbp.Web.Host.Controllers.HomeController.Index (EdwardAbp.Web.Host)
+INFO  2018-08-13 17:28:32,635 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method EdwardAbp.Web.Host.Controllers.HomeController.Index (EdwardAbp.Web.Host) - Validation state: Valid
+INFO  2018-08-13 17:28:32,643 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method EdwardAbp.Web.Host.Controllers.HomeController.Index (EdwardAbp.Web.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 2.1382ms.
+INFO  2018-08-13 17:28:32,890 [6    ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2018-08-13 17:28:32,909 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action EdwardAbp.Web.Host.Controllers.HomeController.Index (EdwardAbp.Web.Host) in 960.5291ms
+INFO  2018-08-13 17:28:32,935 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3518.7343ms 302 
+INFO  2018-08-13 17:28:32,939 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2018-08-13 17:28:32,979 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 41.5906ms 200 text/html
+INFO  2018-08-13 17:28:33,032 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui.css  
+INFO  2018-08-13 17:28:33,033 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-bundle.js  
+INFO  2018-08-13 17:28:33,035 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-standalone-preset.js  
+INFO  2018-08-13 17:28:33,102 [13   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-standalone-preset.js was not modified
+INFO  2018-08-13 17:28:33,124 [12   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-bundle.js was not modified
+INFO  2018-08-13 17:28:33,125 [7    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui.css was not modified
+INFO  2018-08-13 17:28:33,161 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 124.3775ms 304 application/javascript
+INFO  2018-08-13 17:28:33,183 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 124.3692ms 304 text/css
+INFO  2018-08-13 17:28:33,187 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 119.7207ms 304 application/javascript
+INFO  2018-08-13 17:28:33,320 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2018-08-13 17:28:33,597 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 275.5167ms 200 application/json;charset=utf-8
+INFO  2018-08-13 17:28:51,057 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21021/api/services/app/OrderService/CreateOrder multipart/form-data; boundary=----WebKitFormBoundarycBHcqdQAc3DqtlKz 261
+INFO  2018-08-13 17:28:51,066 [7    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-08-13 17:28:51,069 [7    ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2018-08-13 17:28:51,136 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "CreateOrder", controller = "OrderService"}. Executing action EdwardAbp.Orders.OrderService.CreateOrder (EdwardAbp.Application)
+INFO  2018-08-13 17:28:51,138 [7    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-08-13 17:28:51,140 [7    ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2018-08-13 17:28:51,903 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method EdwardAbp.Orders.OrderService.CreateOrder (EdwardAbp.Application) with arguments (EdwardAbp.Orders.Dtos.OrderDto) - Validation state: Valid
+DEBUG 2018-08-13 17:29:14,252 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-08-13 17:29:14,331 [1    ] Abp.Modules.AbpModuleManager             - Found 16 ABP modules in total.
+DEBUG 2018-08-13 17:29:14,388 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.Web.Host.Startup.EdwardAbpWebHostModule, EdwardAbp.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:29:14,391 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EdwardAbpWebCoreModule, EdwardAbp.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:29:14,391 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EdwardAbpApplicationModule, EdwardAbp.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:29:14,392 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EdwardAbpCoreModule, EdwardAbp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:29:14,392 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:29:14,392 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:29:14,392 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:29:14,393 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:29:14,394 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EntityFrameworkCore.EdwardAbpEntityFrameworkModule, EdwardAbp.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:29:14,394 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:29:14,395 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:29:14,396 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:29:14,396 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:29:14,396 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:29:14,397 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Runtime.Caching.Redis.AbpRedisCacheModule, Abp.RedisCache, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:29:14,397 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:29:14,400 [1    ] Abp.Modules.AbpModuleManager             - 16 modules loaded.
+DEBUG 2018-08-13 17:29:14,506 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 17:29:14,506 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 17:29:14,506 [1    ] o.Configuration.LanguageManagementConfig - Converted EdwardAbp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 17:29:14,506 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 17:29:15,105 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: EdwardAbp.EntityFrameworkCore.EdwardAbpDbContext, EdwardAbp.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:29:16,064 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-08-13 17:29:16,088 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-08-13 17:29:16,104 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-08-13 17:29:16,110 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EdwardAbp
+DEBUG 2018-08-13 17:29:16,119 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-08-13 17:29:16,242 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-08-13 17:29:16,285 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 12 classes define auto mapping attributes
+DEBUG 2018-08-13 17:29:16,285 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-08-13 17:29:16,288 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Users.Dto.CreateUserDto
+DEBUG 2018-08-13 17:29:16,289 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Users.Dto.UserDto
+DEBUG 2018-08-13 17:29:16,289 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-08-13 17:29:16,289 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-08-13 17:29:16,289 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Roles.Dto.CreateRoleDto
+DEBUG 2018-08-13 17:29:16,289 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Roles.Dto.PermissionDto
+DEBUG 2018-08-13 17:29:16,289 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Roles.Dto.RoleDto
+DEBUG 2018-08-13 17:29:16,290 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Orders.Dtos.OrderDto
+DEBUG 2018-08-13 17:29:16,290 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Orders.Dtos.OrderItemDto
+DEBUG 2018-08-13 17:29:16,290 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-08-13 17:29:16,290 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.MultiTenancy.Dto.TenantDto
+INFO  2018-08-13 17:29:21,043 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/  
+INFO  2018-08-13 17:29:21,043 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:21021/  0
+INFO  2018-08-13 17:29:21,127 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 150.3873ms 200 
+INFO  2018-08-13 17:29:23,436 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action EdwardAbp.Web.Host.Controllers.HomeController.Index (EdwardAbp.Web.Host)
+INFO  2018-08-13 17:29:24,159 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method EdwardAbp.Web.Host.Controllers.HomeController.Index (EdwardAbp.Web.Host) - Validation state: Valid
+INFO  2018-08-13 17:29:24,168 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method EdwardAbp.Web.Host.Controllers.HomeController.Index (EdwardAbp.Web.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 2.1545ms.
+INFO  2018-08-13 17:29:24,399 [6    ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2018-08-13 17:29:24,416 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action EdwardAbp.Web.Host.Controllers.HomeController.Index (EdwardAbp.Web.Host) in 972.0055ms
+INFO  2018-08-13 17:29:24,436 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2018-08-13 17:29:24,441 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3467.9836ms 302 
+INFO  2018-08-13 17:29:24,482 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 47.2111ms 200 text/html
+INFO  2018-08-13 17:29:24,550 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui.css  
+INFO  2018-08-13 17:29:24,552 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-bundle.js  
+INFO  2018-08-13 17:29:24,556 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-standalone-preset.js  
+INFO  2018-08-13 17:29:24,618 [11   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-bundle.js was not modified
+INFO  2018-08-13 17:29:24,619 [7    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui.css was not modified
+INFO  2018-08-13 17:29:24,622 [6    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-standalone-preset.js was not modified
+INFO  2018-08-13 17:29:24,656 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 117.0954ms 304 application/javascript
+INFO  2018-08-13 17:29:24,658 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 73.0053ms 304 application/javascript
+INFO  2018-08-13 17:29:24,720 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 117.8153ms 304 text/css
+INFO  2018-08-13 17:29:24,789 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2018-08-13 17:29:25,101 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 304.4063ms 200 application/json;charset=utf-8
+INFO  2018-08-13 17:29:36,486 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21021/api/services/app/OrderService/CreateOrder multipart/form-data; boundary=----WebKitFormBoundaryjKYmdOG6IRpKZjaQ 261
+INFO  2018-08-13 17:29:36,497 [12   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-08-13 17:29:36,500 [12   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2018-08-13 17:29:36,567 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "CreateOrder", controller = "OrderService"}. Executing action EdwardAbp.Orders.OrderService.CreateOrder (EdwardAbp.Application)
+INFO  2018-08-13 17:29:36,570 [12   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-08-13 17:29:36,572 [12   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2018-08-13 17:29:37,346 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method EdwardAbp.Orders.OrderService.CreateOrder (EdwardAbp.Application) with arguments (EdwardAbp.Orders.Dtos.OrderDto) - Validation state: Valid
+DEBUG 2018-08-13 17:30:01,728 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-08-13 17:30:03,028 [1    ] Abp.Modules.AbpModuleManager             - Found 16 ABP modules in total.
+DEBUG 2018-08-13 17:30:03,090 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.Web.Host.Startup.EdwardAbpWebHostModule, EdwardAbp.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:30:03,094 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EdwardAbpWebCoreModule, EdwardAbp.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:30:03,094 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EdwardAbpApplicationModule, EdwardAbp.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:30:03,095 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EdwardAbpCoreModule, EdwardAbp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:30:03,095 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:30:03,096 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:30:03,096 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:30:03,097 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:30:03,098 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EdwardAbp.EntityFrameworkCore.EdwardAbpEntityFrameworkModule, EdwardAbp.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:30:03,099 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:30:03,100 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:30:03,100 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:30:03,101 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:30:03,101 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:30:03,101 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Runtime.Caching.Redis.AbpRedisCacheModule, Abp.RedisCache, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:30:03,102 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:30:03,105 [1    ] Abp.Modules.AbpModuleManager             - 16 modules loaded.
+DEBUG 2018-08-13 17:30:03,227 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 17:30:03,227 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 17:30:03,227 [1    ] o.Configuration.LanguageManagementConfig - Converted EdwardAbp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 17:30:03,227 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-08-13 17:30:03,867 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: EdwardAbp.EntityFrameworkCore.EdwardAbpDbContext, EdwardAbp.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-13 17:30:05,058 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-08-13 17:30:05,100 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-08-13 17:30:05,125 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-08-13 17:30:05,137 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EdwardAbp
+DEBUG 2018-08-13 17:30:05,151 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-08-13 17:30:05,333 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-08-13 17:30:05,394 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 12 classes define auto mapping attributes
+DEBUG 2018-08-13 17:30:05,394 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-08-13 17:30:05,397 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Users.Dto.CreateUserDto
+DEBUG 2018-08-13 17:30:05,398 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Users.Dto.UserDto
+DEBUG 2018-08-13 17:30:05,398 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-08-13 17:30:05,398 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-08-13 17:30:05,398 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Roles.Dto.CreateRoleDto
+DEBUG 2018-08-13 17:30:05,398 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Roles.Dto.PermissionDto
+DEBUG 2018-08-13 17:30:05,398 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Roles.Dto.RoleDto
+DEBUG 2018-08-13 17:30:05,398 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Orders.Dtos.OrderDto
+DEBUG 2018-08-13 17:30:05,398 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.Orders.Dtos.OrderItemDto
+DEBUG 2018-08-13 17:30:05,398 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-08-13 17:30:05,398 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EdwardAbp.MultiTenancy.Dto.TenantDto
+INFO  2018-08-13 17:30:11,253 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/  
+INFO  2018-08-13 17:30:11,253 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:21021/  0
+INFO  2018-08-13 17:30:11,353 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 168.172ms 200 
+INFO  2018-08-13 17:30:14,033 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action EdwardAbp.Web.Host.Controllers.HomeController.Index (EdwardAbp.Web.Host)
+INFO  2018-08-13 17:30:14,799 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method EdwardAbp.Web.Host.Controllers.HomeController.Index (EdwardAbp.Web.Host) - Validation state: Valid
+INFO  2018-08-13 17:30:14,808 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method EdwardAbp.Web.Host.Controllers.HomeController.Index (EdwardAbp.Web.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 2.2939ms.
+INFO  2018-08-13 17:30:15,083 [13   ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2018-08-13 17:30:15,103 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action EdwardAbp.Web.Host.Controllers.HomeController.Index (EdwardAbp.Web.Host) in 1059.1617ms
+INFO  2018-08-13 17:30:15,130 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2018-08-13 17:30:15,136 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3954.2235ms 302 
+INFO  2018-08-13 17:30:15,198 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 62.1068ms 200 text/html
+INFO  2018-08-13 17:30:15,229 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui.css  
+INFO  2018-08-13 17:30:15,253 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-bundle.js  
+INFO  2018-08-13 17:30:15,255 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-standalone-preset.js  
+INFO  2018-08-13 17:30:15,331 [13   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-bundle.js was not modified
+INFO  2018-08-13 17:30:15,334 [15   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-standalone-preset.js was not modified
+INFO  2018-08-13 17:30:15,335 [14   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui.css was not modified
+INFO  2018-08-13 17:30:15,369 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 112.3696ms 304 application/javascript
+INFO  2018-08-13 17:30:15,392 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 122.5047ms 304 application/javascript
+INFO  2018-08-13 17:30:15,396 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 122.4662ms 304 text/css
+INFO  2018-08-13 17:30:15,633 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2018-08-13 17:30:15,945 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 306.5007ms 200 application/json;charset=utf-8
+INFO  2018-08-13 17:30:31,030 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21021/api/services/app/OrderService/CreateOrder multipart/form-data; boundary=----WebKitFormBoundary3JDU9aDlb2Ln6bWs 261
+INFO  2018-08-13 17:30:31,039 [7    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-08-13 17:30:31,043 [7    ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2018-08-13 17:30:31,114 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "CreateOrder", controller = "OrderService"}. Executing action EdwardAbp.Orders.OrderService.CreateOrder (EdwardAbp.Application)
+INFO  2018-08-13 17:30:31,116 [7    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-08-13 17:30:31,118 [7    ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2018-08-13 17:30:31,911 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method EdwardAbp.Orders.OrderService.CreateOrder (EdwardAbp.Application) with arguments (EdwardAbp.Orders.Dtos.OrderDto) - Validation state: Valid

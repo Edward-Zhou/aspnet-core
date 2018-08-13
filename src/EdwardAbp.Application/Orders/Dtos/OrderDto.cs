@@ -1,4 +1,6 @@
 ﻿using Abp.AutoMapper;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -55,6 +57,7 @@ namespace EdwardAbp.Orders.Dtos
         /// </summary>
         //public Address Address { get; set; }
         public long? AddressId { get; set; }
+        public IFormFile file { get; set; }
 
         public virtual ICollection<OrderItemDto> OrderItems { get; set; }
 
